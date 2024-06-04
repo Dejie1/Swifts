@@ -43,17 +43,6 @@ struct SupportArea: View {
                         CategoryButton(iconName: "person.3.fill", label: "Events", color: Color(red:0.61176, green:0.15294, blue:0.69020), selectedCategories: $selectedCategories)
                     }
                 }
-                //Display issue for iPhone SE
-                //            HStack{
-                //                Spacer().frame(height: 60)
-                //                Button("Next") {
-                //                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                //                }
-                //                .buttonStyle(BorderedProminentButtonStyle())
-                //                .tint(.blue)
-                //                .padding(.trailing,50)
-                //    //            .controlSize(.large)
-                //            }
                 Button(action:{} ){
                     NavigationLink(destination: MentorList(selectedCategories: selectedCategories)) {
                         Text("Next")
