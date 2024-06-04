@@ -4,3 +4,4 @@
 *.xcuserstate
 *.plist
 .DS_Store
+*.xcbkptlist
