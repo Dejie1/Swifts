@@ -1,0 +1,73 @@
+[
+    {
+        "name": "John Doe",
+        "id": 1001,
+        "about": "I am an experienced financial advisor with over 10 years of experience helping individuals manage their finances and investments.",
+        "imageName": "twinlake",
+        "age": 24,
+        "uni": "USYD",
+        "course" : "Bachelor of Computer Science",
+        "categories": ["Finance", "Education"]
+    },
+    {
+        "name": "Jane Smith",
+        "id": 1002,
+        "about": "As a healthcare professional, I am passionate about helping people navigate health services and improve their well-being.",
+        "imageName": "icybay",
+        "age": 23,
+        "uni": "UTS",
+        "course": "Bachelor of Business",
+        "categories": ["Health", "Events"]
+    },
+    {
+        "name": "Michael Brown",
+        "id": 1003,
+        "about": "I have extensive knowledge in transportation logistics and can assist with finding the best routes and transportation methods.",
+        "imageName": "silversalmoncreek",
+        "age": 25,
+        "uni": "University of Melbourne",
+        "course": "Bachelor of Arts",
+        "categories": ["Transport", "Housing"]
+    },
+    {
+        "name": "Jessica Williams",
+        "id": 1008,
+        "about": "A career counselor dedicated to guiding individuals towards fulfilling and successful career paths.",
+        "imageName": "rainbowlake",
+        "age": 21,
+        "uni": "Monash University",
+        "course": "Bachelor of Biomedical Science",
+        "categories": ["Education", "Career"]
+    },
+    {
+        "name": "Sarah Johnson",
+        "id": 1006,
+        "about": "A seasoned educator with a passion for literature and helping students excel in English and writing.",
+        "imageName": "rainbowlake",
+        "age": 24,
+        "uni": "ANU",
+        "course": "Bachelor of International Relations",
+        "categories": ["Education", "Writing"]
+    },
+    {
+        "name": "Emily White",
+        "id": 1004,
+        "about": "With a background in education, I am dedicated to helping students succeed academically and providing guidance on educational opportunities.",
+        "imageName": "chilkoottrail",
+        "age": 22,
+        "uni": "RMIT",
+        "course": "Bachelor of Media and Communication",
+        "categories": ["Education", "Finance"]
+    },
+    {
+        "name": "David Green",
+        "id": 1005,
+        "about": "I have a strong background in organizing and managing events, and I love helping others plan and execute successful events.",
+        "imageName": "stmarylake",
+        "age": 23,
+        "uni": "Macquarie University",
+        "course": "Bachelor of Psychology",
+        "categories": ["Events", "Health"]
+    }
+]
+
