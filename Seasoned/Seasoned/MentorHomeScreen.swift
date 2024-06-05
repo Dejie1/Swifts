@@ -9,55 +9,125 @@ import SwiftUI
 
 struct MentorHomeScreen: View {
     var body: some View {
-       
-        Text("Welcome Mentor")
-            .padding()
-        VStack {
-            HStack {
-                Text("Upcoming MeetUps")
-                    .font(.title2)
+        ZStack {
+            LinearGradient(colors: [.green, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
+            .ignoresSafeArea()
+            
+            VStack {
+                Text("Welcome, Mentor")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                    .foregroundStyle(.white)
+                VStack {
+                    HStack {
+                        Text("Upcoming MeetUps")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                    }
+                    .padding(.horizontal)
+                    
+                    Divider()
+                    
+                    VStack {
+                        VStack {
+                            StudentRow(image: "placeholder",
+                                       studentName: "Student Name",
+                                       meetUpTime: "10am Tuesday 26 June")
+                            
+                            StudentRow(image: "placeholder",
+                                       studentName: "Student Name",
+                                       meetUpTime: "10am Tuesday 26 June")
+                            
+                            StudentRow(image: "placeholder",
+                                       studentName: "Student Name",
+                                       meetUpTime: "10am Tuesday 26 June")
+                        }
+                        .padding(.bottom, 10)
+                        
+                        Divider()
+                        
+                        HStack {
+                            
+                            Text("See all Upcoming MeetUps")
+                                .fontWeight(.semibold)
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right")
+                        }
+                        .padding(.top, 10)
+                    }
+                    .padding(.horizontal)
+                }
+                .frame(width: 350, height: 290)
+                .background(Color(UIColor(.white)))
+                .opacity(0.8)
+                .cornerRadius(10)
+                .shadow(radius: 15)
                 
                 Spacer()
                 
-            }
-            .padding(.horizontal)
-            VStack {
                 VStack {
-                    StudentRow(image: "placeholder",
-                               studentName: "Student Name",
-                               meetUpTime: "10am Tuesday 26 June")
+                    HStack {
+                        Text("MeetUp Requests")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                    }
+                    .padding(.horizontal)
                     
-                    StudentRow(image: "placeholder",
-                               studentName: "Student Name",
-                               meetUpTime: "10am Tuesday 26 June")
+                    Divider()
                     
-                    StudentRow(image: "placeholder",
-                               studentName: "Student Name",
-                               meetUpTime: "10am Tuesday 26 June")
+                    VStack {
+                        VStack {
+                            StudentRequestRow(image: "placeholder",
+                                              studentName: "StudentName",
+                                              requestMessage: "Hi, I would like to MeetUp and discuss some topics")
+                            
+                            StudentRequestRow(image: "placeholder",
+                                              studentName: "StudentName",
+                                              requestMessage: "Hi, I would like to MeetUp and discuss some topics")
+                            
+                            StudentRequestRow(image: "placeholder",
+                                              studentName: "StudentName",
+                                              requestMessage: "Hi, I would like to MeetUp and discuss some topics")
+                        }
+                        .padding(.bottom, 10)
+                        
+                        Divider()
+                        
+                        HStack {
+                            
+                            Text("See all Upcoming MeetUps")
+                                .fontWeight(.semibold)
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right")
+                        }
+                        .padding(.top, 10)
+                    }
+                    .padding(.horizontal)
                 }
-                .padding(.bottom, 10)
+                .frame(width: 350, height: 320)
+                .background(Color(UIColor(.white)))
+                .opacity(0.8)
+                .cornerRadius(10)
+                .shadow(radius: 15)
                 
-                Divider()
+                Spacer()
                 
-                HStack {
-                    
-                    Text("See all Upcoming MeetUps")
-                    
-                    Spacer()
-                    
-                    Image(systemName: "chevron.right")
-                }
-                .padding(.top, 10)
+                
             }
-            .padding(.horizontal)
         }
-        .frame(width: 350, height: 280)
-        .background(Color(UIColor(.cyan)))
-        .cornerRadius(10)
-        
     }
 }
-
 #Preview {
     MentorHomeScreen()
 }
