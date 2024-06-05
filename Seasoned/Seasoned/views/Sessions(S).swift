@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct Sessions_S_: View {
-  var body: some View {
-    NavigationStack {
-      ScrollView {
-        // Your scroll view content
-      }
-      HStack {
-        Text("Chats")
-      }
-      .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading) // Position top left
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                // Your scroll view content here
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("Sessions")
+                        .font(.title)
+                        .bold()
+                    
+                
+                        
+                }
+            }
+        }
     }
-  }
 }
 
-#Preview {
-  Sessions_S_()
+struct Sessions_S_Previews: PreviewProvider {
+    static var previews: some View {
+        Sessions_S_()
+    }
 }
