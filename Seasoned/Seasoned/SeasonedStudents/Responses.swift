@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct Responses: View {
+    
+   
+    
     var body: some View {
-        ZStack(content: {
-            Text("Schedules")
-            
-        })
+       
         
         
         TabView{
