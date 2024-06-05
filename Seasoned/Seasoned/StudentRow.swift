@@ -19,12 +19,12 @@ struct StudentRow: View {
                 .resizable()
                 .scaledToFit()
                 .clipShape(Circle())
-                .frame(width: 60)
+                .frame(width: 45)
             
             VStack(alignment: .leading) {
                 Text(studentName)
                     .font(.title3)
-                Text("Scheduled for (\meetUpTime)")
+                Text("Scheduled for \(meetUpTime)")
                     .font(.caption)
             
             
@@ -35,5 +35,5 @@ struct StudentRow: View {
 }
 
 #Preview {
-    StudentRow()
+    StudentRow(image: "placeholder", studentName: "Student Name", meetUpTime: "10am Tuesday 26 June")
 }

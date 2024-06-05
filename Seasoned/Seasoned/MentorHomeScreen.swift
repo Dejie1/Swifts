@@ -12,34 +12,46 @@ struct MentorHomeScreen: View {
        
         Text("Welcome Mentor")
             .padding()
-        
-        HStack {
-            Text("Upcoming MeetUps")
-                .font(.title2)
-            
-            Spacer()
-            
-        }
-        .padding(.horizontal)
-            
+        VStack {
             HStack {
-                Image("placeholder")
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(Circle())
-                    .frame(width: 60)
+                Text("Upcoming MeetUps")
+                    .font(.title2)
                 
-                VStack(alignment: .leading) {
-                    Text("Student Name")
-                        .font(.title3)
-                    Text("Scheduled for 10:00am Tuesday 26 June")
-                        .font(.caption)
-                
+                Spacer()
                 
             }
-            Spacer()
-        }
             .padding(.horizontal)
+            VStack {
+                VStack {
+                    StudentRow(image: "placeholder",
+                               studentName: "Student Name",
+                               meetUpTime: "10am Tuesday 26 June")
+                    
+                    StudentRow(image: "placeholder",
+                               studentName: "Student Name",
+                               meetUpTime: "10am Tuesday 26 June")
+                    
+                    StudentRow(image: "placeholder",
+                               studentName: "Student Name",
+                               meetUpTime: "10am Tuesday 26 June")
+                }
+                .padding(.bottom)
+                
+                Divider()
+                
+                HStack {
+                    
+                    Text("See all Upcoming MeetUps")
+                    
+                    Spacer()
+                    
+                    Image(systemName: "chevron.right")
+                }
+                .padding(.top)
+            }
+            .padding(.horizontal)
+        }
+        
     }
 }
 
