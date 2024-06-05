@@ -35,7 +35,7 @@ struct MentorHomeScreen: View {
                                studentName: "Student Name",
                                meetUpTime: "10am Tuesday 26 June")
                 }
-                .padding(.bottom)
+                .padding(.bottom, 10)
                 
                 Divider()
                 
@@ -47,10 +47,13 @@ struct MentorHomeScreen: View {
                     
                     Image(systemName: "chevron.right")
                 }
-                .padding(.top)
+                .padding(.top, 10)
             }
             .padding(.horizontal)
         }
+        .frame(width: 350, height: 280)
+        .background(Color(UIColor(.cyan)))
+        .cornerRadius(10)
         
     }
 }
