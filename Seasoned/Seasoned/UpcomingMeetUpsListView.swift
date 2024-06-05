@@ -10,7 +10,7 @@ import SwiftUI
 struct UpcomingMeetUpsListView: View {
     var body: some View {
         ScrollView {
-        
+            
                 
             }
         }
