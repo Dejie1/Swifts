@@ -7,24 +7,29 @@
 
 import SwiftUI
 
-struct SupportArea: View {
+struct SupportAreaView: View {
+    @EnvironmentObject var userViewModel: UserViewModel
     @State private var selectedCategories: Set<String> = []
+    @State private var navigateToHome = false
+    @State private var navigateToMentors = false
     
     var body: some View {
-        NavigationView{
-            VStack{
+        NavigationStack {
+            VStack {
+                
                 Spacer().frame(height: 50)
-                Group{
-                    Text("Hi, User!")
+                Group {
+                    Text("Hi, \(userViewModel.displayName)!")
                         .font(.title)
                         .fontWeight(.black)
-                        .padding(.bottom,15)
-                    Text("Where do you need help in? ")
-                        .font(.title2)
+                        .padding(.bottom, 15)
+                    Text(userViewModel.user?.userType == "Mentor" ? "Which category do you want to help in?" : "Where do you need help in?")
+                        .font(.title3)
                         .fontWeight(.semibold)
                 }
-                .padding(.leading,20)
-                .frame(maxWidth:.infinity, alignment: .leading)
+                .padding(.leading, 20)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .navigationBarBackButtonHidden(true)
                 Spacer().frame(height: 45)
                 
                 VStack(spacing: 25) {
@@ -34,7 +39,7 @@ struct SupportArea: View {
                     }
                     
                     HStack(spacing: 40) {
-                        CategoryButton(iconName: "cross.circle.fill", label: "Health",color: Color(red:0.12941, green:0.58824, blue:0.95294), selectedCategories: $selectedCategories)
+                        CategoryButton(iconName: "cross.circle.fill", label: "Health", color: Color(red:0.12941, green:0.58824, blue:0.95294), selectedCategories: $selectedCategories)
                         CategoryButton(iconName: "graduationcap.fill", label: "Education", color: Color(red:1.00000, green:0.59608, blue:0.00000), selectedCategories: $selectedCategories)
                     }
                     
@@ -43,35 +48,52 @@ struct SupportArea: View {
                         CategoryButton(iconName: "person.3.fill", label: "Events", color: Color(red:0.61176, green:0.15294, blue:0.69020), selectedCategories: $selectedCategories)
                     }
                 }
-                //Display issue for iPhone SE
-                //            HStack{
-                //                Spacer().frame(height: 60)
-                //                Button("Next") {
-                //                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                //                }
-                //                .buttonStyle(BorderedProminentButtonStyle())
-                //                .tint(.blue)
-                //                .padding(.trailing,50)
-                //    //            .controlSize(.large)
-                //            }
-                Button(action:{} ){
-                    NavigationLink(destination: MentorList(selectedCategories: selectedCategories)) {
-                        Text("Next")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(selectedCategories.isEmpty ? Color.gray: Color.blue)
-                            .cornerRadius(10)
-                            .padding(.horizontal)
+                
+                Button(action: {
+                    if userViewModel.user?.userType == "Mentor" {
+                        updateMentorCategories()
+                        navigateToHome = true
+                    } else {
+                        navigateToMentors = true
                     }
+                }) {
+                    Text("Next")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(selectedCategories.isEmpty ? Color.gray : Color.blue)
+                        .cornerRadius(10)
+                        .padding(.horizontal)
                 }
                 .disabled(selectedCategories.isEmpty)
                 .padding()
             }
-            Spacer()
+            .navigationDestination(isPresented: $navigateToHome) {
+                ContentView()
+            }
+            .navigationDestination(isPresented: $navigateToMentors) {
+                MentorList(selectedCategories: Array(selectedCategories))
+                    .environmentObject(userViewModel)
+                    .navigationBarBackButtonHidden(false)
+                    
+            }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear {
+            userViewModel.fetchCurrentUser()
+        }
+//        .navigationBarBackButtonHidden(true)
+    }
+    
+    private func updateMentorCategories() {
+        UserManager.shared.updateSelectedCategories(Array(selectedCategories)) { result in
+            switch result {
+            case .success():
+                print("Categories updated successfully")
+            case .failure(let error):
+                print("Failed to update categories:", error)
+            }
+        }
     }
 }
 
@@ -95,8 +117,7 @@ struct CategoryButton: View {
                 selectedCategories.insert(label)
                 print("\(label) Added")
             }
-        })
-        {
+        }) {
             VStack {
                 Image(systemName: iconName)
                     .font(.system(size: 40))
@@ -108,10 +129,8 @@ struct CategoryButton: View {
                     .foregroundColor(.black)
             }
             .frame(width: 140, height: 140)
-//            .background(Color.white)
             .background(isSelected ? Color.gray.opacity(0.3) : Color.white)
             .cornerRadius(15)
-            //        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.black, lineWidth: 1)
@@ -122,6 +141,8 @@ struct CategoryButton: View {
     }
 }
 
+
 #Preview {
-    SupportArea()
+    SupportAreaView()
+        .environmentObject(UserViewModel())
 }
