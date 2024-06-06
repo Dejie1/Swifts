@@ -95,24 +95,12 @@ struct LoginView: View {
                         .background(Color.blue)
                         .cornerRadius(5.0)
                     }
-                    .sheet(isPresented: $showUserDetailsPage) {
-                        NavigationStack {
-                            UserDetailsView()
-                                .toolbar {
-                                    ToolbarItem(placement: .navigationBarLeading) {
-                                        Button("Close") {
-                                            showUserDetailsPage = false
-                                    }
-                                }
-                            }
-                        }
-                    }
                     
                     Text(self.loginStatusMessage)
                         .foregroundColor(.red)
                     
                 }
-                // NavigationLink to SupportAreaPage or ContentView
+                // NavigationLink to different pages
                 .navigationDestination(isPresented: $showContentPage){
                     MainMessageView()
                         .environmentObject(UserViewModel())
@@ -162,7 +150,8 @@ struct LoginView: View {
             print("Successfully logged in as user: \(result?.user.uid ?? "")")
             self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
             
-            // Fetch the current user to check if the name is nil
+            // Fetch the current user to check if the name is empty.
+            // Booleans to Navigate the user to different pages
             self.viewModel.fetchCurrentUser { result in
                 switch result {
                 case .success(let user):

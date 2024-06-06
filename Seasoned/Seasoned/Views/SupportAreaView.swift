@@ -72,11 +72,23 @@ struct SupportAreaView: View {
             .navigationDestination(isPresented: $navigateToHome) {
                 ContentView()
             }
-            .navigationDestination(isPresented: $navigateToMentors) {
-                MentorList(selectedCategories: Array(selectedCategories))
-                    .environmentObject(userViewModel)
-                    .navigationBarBackButtonHidden(false)
-                    
+//            .navigationDestination(isPresented: $navigateToMentors) {
+//                MentorList(selectedCategories: Array(selectedCategories))
+//                    .environmentObject(userViewModel)
+//                    .navigationBarBackButtonHidden(false)
+                
+            .fullScreenCover(isPresented: $navigateToMentors) {
+                NavigationStack {
+                    MentorList(selectedCategories: Array(selectedCategories))
+                        .environmentObject(userViewModel)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button("Close") {
+                                    navigateToMentors = false
+                                }
+                            }
+                        }
+                }
             }
         }
         .onAppear {
