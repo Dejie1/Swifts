@@ -43,7 +43,8 @@ struct SeasonedApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainMessageView()
+            LoginView(didCompleteLoginProcess: {})
+                .environmentObject(UserViewModel())
         }
     }
 }
