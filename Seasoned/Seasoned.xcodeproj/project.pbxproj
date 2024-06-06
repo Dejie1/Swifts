@@ -51,7 +51,6 @@
 		E37C3B452C098D7A00DEA61D = {
 			isa = PBXGroup;
 			children = (
-				A0C82AB12C11343900CB6CA5 /* StudenDetail.swift */,
 				E37C3B502C098D7A00DEA61D /* Seasoned */,
 				E37C3B4F2C098D7A00DEA61D /* Products */,
 			);
@@ -77,6 +76,7 @@
 				A024D7642C10166300B95600 /* UpcomingMeetUpsListView.swift */,
 				A024D7602C0FF48C00B95600 /* StudentRow.swift */,
 				A024D7622C10075600B95600 /* StudentRequestRow.swift */,
+				A0C82AB12C11343900CB6CA5 /* StudenDetail.swift */,
 				E37C3B552C098D7B00DEA61D /* Assets.xcassets */,
 				E37C3B572C098D7B00DEA61D /* Preview Content */,
 			);
