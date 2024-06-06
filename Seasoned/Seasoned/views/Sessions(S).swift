@@ -14,10 +14,8 @@ struct Sessions_S_: View {
              
                 
                 List{
-                    ForEach(0...10, id: \.self) {
-                        message in
-                        Inboxrowview()
-                    }
+                    ForEach(chatItems) { chatItem in
+                              Inboxrowview(chatItem: chatItem)                    }
                 }
                 .listStyle(PlainListStyle())
                 .frame(height: UIScreen.main.bounds.height - 150)
