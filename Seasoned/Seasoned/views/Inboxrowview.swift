@@ -36,7 +36,7 @@ let chatItems: [ChatItem] = [
     ChatItem(profileImage: "EmilyWhite", name: "Dolly", message: "Hi there, can you please help me?.", timestamp: "Fri, 30 June : 2:00 pm"),
     
     
-    ChatItem(profileImage: "JessicaWilliams", name: "Lolly", message: "Hello, I am Lolly.", timestamp: "Fri, 30 June : 2:00 pm"),
+    ChatItem(profileImage: "JessicaWilliams", name: "Lolly", message: "Hello, I need help with Housing, Finance", timestamp: "Fri, 30 June : 2:00 pm"),
     
     
     ChatItem(profileImage: "DavidGreen", name: "Sorry", message: "Hey I am so Sorry.", timestamp: "Fri, 30 June : 2:00 pm"),

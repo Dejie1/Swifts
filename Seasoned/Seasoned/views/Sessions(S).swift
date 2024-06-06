@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct Sessions_S_: View {
     var body: some View {
         NavigationStack {
@@ -26,11 +27,16 @@ struct Sessions_S_: View {
                         .font(.title)
                         .bold()
                     
-                
+                    
+                    
                         
                 }
+                
+                
             }
         }
+        
+      
     }
 }
 
