@@ -17,10 +17,13 @@ struct Sessions_S_: View {
                 List{
                     ForEach(chatItems) { chatItem in
                               Inboxrowview(chatItem: chatItem)                    }
+                    
                 }
                 .listStyle(PlainListStyle())
                 .frame(height: UIScreen.main.bounds.height - 150)
             }
+            
+            
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text("Sessions")
@@ -28,8 +31,7 @@ struct Sessions_S_: View {
                         .bold()
                     
                     
-                    
-                        
+
                 }
                 
                 
@@ -43,5 +45,6 @@ struct Sessions_S_: View {
 struct Sessions_S_Previews: PreviewProvider {
     static var previews: some View {
         Sessions_S_()
+        
     }
 }

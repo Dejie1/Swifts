@@ -9,16 +9,21 @@ import SwiftUI
 
 struct Requests: View {
     var body: some View {
-        
-    
-        TabView{
-            ViewA()
-            ViewB()
-            ViewC()
-               
+        VStack{
+            HStack{
+                Text("Requests")
+                                 .font(.largeTitle)
+                                 .fontWeight(.bold)
+                                  .frame(maxWidth: .infinity, alignment: .leading)
+                                 .padding()
+            }
         }
+    
     }
+    
 }
+
+
 
 #Preview {
     Responses()
