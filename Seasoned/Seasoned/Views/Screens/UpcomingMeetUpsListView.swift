@@ -9,13 +9,12 @@ import SwiftUI
 
 struct UpcomingMeetUpsListView: View {
     var body: some View {
-        ScrollView {
-           
-            
-                
-            }
+        NavigationStack {
+            Text("Upcoming meet up view")
+                .navigationTitle("Upcoming Meet Ups")
         }
     }
+}
 
 
 #Preview {

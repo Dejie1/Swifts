@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MentorHomeScreen: View {
     var body: some View {
+        NavigationStack {
         ZStack {
             LinearGradient(colors: [.green, .yellow], startPoint: .topLeading, endPoint: .bottomTrailing)
             .ignoresSafeArea()
@@ -51,13 +52,15 @@ struct MentorHomeScreen: View {
                         Divider()
                         
                         HStack {
-                            
-                            Text("See all Upcoming MeetUps")
+                            NavigationLink(("See all Upcoming MeetUps"), destination: UpcomingMeetUpsListView())
+                                .foregroundStyle(.black)
                                 .fontWeight(.semibold)
+//                            Text("See all Upcoming MeetUps")
+//                                .fontWeight(.semibold)
                             
                             Spacer()
                             
-                            Image(systemName: "chevron.right")
+//                            Image(systemName: "chevron.right")
                         }
                         .padding(.top, 10)
                     }
@@ -104,12 +107,16 @@ struct MentorHomeScreen: View {
                         
                         HStack {
                             
-                            Text("See all Upcoming MeetUps")
+                            NavigationLink(("See all MeetUp Requests"), destination: MeetUpRequestListView())
+                                .foregroundStyle(.black)
                                 .fontWeight(.semibold)
+                            
+//                            Text("See all Upcoming MeetUps")
+//                                .fontWeight(.semibold)
                             
                             Spacer()
                             
-                            Image(systemName: "chevron.right")
+//                            Image(systemName: "chevron.right")
                         }
                         .padding(.top, 10)
                     }
@@ -123,7 +130,7 @@ struct MentorHomeScreen: View {
                 
                 Spacer()
                 
-                
+                }
             }
         }
     }
