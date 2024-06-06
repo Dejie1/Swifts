@@ -11,7 +11,16 @@ struct Sessions_S_: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                // Your scroll view content here
+             
+                
+                List{
+                    ForEach(0...10, id: \.self) {
+                        message in
+                        Inboxrowview()
+                    }
+                }
+                .listStyle(PlainListStyle())
+                .frame(height: UIScreen.main.bounds.height - 150)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {

@@ -25,16 +25,23 @@ struct Inboxrowview: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-                    .frame(maxWidth: UIScreen.main.bounds.width - 100, alignment: .leading )
+                    .frame(maxWidth: UIScreen.main.bounds.width - 200, alignment: .leading )
                     .truncationMode(.tail)
                    
-                Text("Wed, 28 June - 2:00 pm - 3:00 pm (1h)")
+                Text("Wed, 28 June - 2:00 pm - 3:00 pm")
                     .font(.subheadline)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    
-
+                
             }
+            
+            HStack{
+                Image(systemName: "chevron.right")
+            }
+            .font(.footnote)
+            .foregroundColor(.black)
         }
+       
+        .frame(height:72)
     }
 }
 
