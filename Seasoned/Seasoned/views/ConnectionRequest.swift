@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ConnectionRequest: View {
+    let chatItem: ChatItem
     
     var body: some View {
         HStack(alignment: .top, spacing: 12){
@@ -18,8 +19,8 @@ struct ConnectionRequest: View {
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             
             VStack(alignment: .leading, spacing: 4){
-             
-                Text("Tim")
+                
+                Text(chatItem.name)
                     .font(.headline)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 HStack{
@@ -37,10 +38,13 @@ struct ConnectionRequest: View {
             }
         }
     }
-    
+}
     struct ConnectionRequest_Previews: PreviewProvider{
+        
         static var previews: some View{
-            ConnectionRequest()
+            let sampleChatItem = ChatItem(profileImage: "person.circle.fill", name: "Tim", message: "", timestamp: "")
+            return ConnectionRequest(chatItem: sampleChatItem)
+           // ConnectionRequest( chatItem: <#ChatItem#>)
         }
     }
-}
+
