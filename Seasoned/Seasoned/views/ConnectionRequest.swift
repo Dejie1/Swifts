@@ -12,11 +12,12 @@ struct ConnectionRequest: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 12){
-            Image(systemName: "person.circle.fill")
-            
+            Image(chatItem.profileImage)
                 .resizable()
+                .clipShape(Circle())
                 .frame(width: 60, height:60)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            
             
             VStack(alignment: .leading, spacing: 4){
                 
