@@ -10,11 +10,15 @@ import MapKit
 
 struct HousingInfoView: View {
     var body: some View {
-        Text("Housing Information")
-            .font(.title)
-            .fontWeight(.bold)
-        
-        
+        VStack {
+            Text("Housing Information")
+                .font(.title)
+                .fontWeight(.bold)
+            
+            Divider()
+            
+            Text("T")
+        }
     }
 }
 

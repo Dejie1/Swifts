@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StudenDetail: View {
+struct StudentDetail: View {
     @State private var message : String = ""
     
     var body: some View {
@@ -98,5 +98,5 @@ struct StudenDetail: View {
 }
 
 #Preview {
-    StudenDetail()
+    StudentDetail()
 }
