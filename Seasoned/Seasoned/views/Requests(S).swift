@@ -11,16 +11,17 @@ import SwiftUI
 struct Requests_S_: View {
     var body: some View {
         NavigationView {
+            ScrollView{
+                
+          
             List {
                 ForEach(0...10, id: \.self) { message in
                 ConnectionRequest()
                 }
          }
             .listStyle(PlainListStyle())
-                        .frame(height: UIScreen.main.bounds.height - 100)
+                        .frame(height: UIScreen.main.bounds.height - 150)
                         
-            
-            
                         .toolbar {
                             ToolbarItem(placement: .navigationBarLeading) {
                                 
@@ -37,7 +38,7 @@ struct Requests_S_: View {
                     }
                 }
             }
-
+}
 
 struct Requests_S_Previews: PreviewProvider {
     static var previews: some View {
