@@ -14,7 +14,7 @@ struct StudenDetail: View {
         VStack {
             Text("Student Name")
                 .font(.title)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .fontWeight(.bold)
                 .padding()
             
             Image("placeholder")
@@ -57,7 +57,7 @@ struct StudenDetail: View {
                         .foregroundStyle(.gray)
                         .background(.white)
                         .frame(maxWidth:.infinity, maxHeight: .infinity)
-                        .overlay(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        .overlay(RoundedRectangle(cornerRadius: 25.0)
                             .stroke(Color.gray,lineWidth: 1))
                 })
                 .frame(width: 90, height: 50)
@@ -85,7 +85,7 @@ struct StudenDetail: View {
                         .foregroundStyle(.blue)
                         .background(.white)
                         .frame(maxWidth:.infinity, maxHeight: .infinity)
-                        .overlay(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                        .overlay(RoundedRectangle(cornerRadius: 25.0)
                             .stroke(Color.blue,lineWidth: 1))
                 })
                 .frame(width: 90, height: 50)
