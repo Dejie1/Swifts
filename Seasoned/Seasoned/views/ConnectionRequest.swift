@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ConnectionRequest: View {
+    
     var body: some View {
         HStack(alignment: .top, spacing: 12){
             Image(systemName: "person.circle.fill")
@@ -21,15 +22,18 @@ struct ConnectionRequest: View {
                 Text("Tim")
                     .font(.headline)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                
-                Text("Wants to Connect")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                
                 HStack{
-                   
+                    Text("Wants to Connect")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .frame(maxWidth: UIScreen.main.bounds.width - 120, alignment: .leading )
+                        .truncationMode(.tail)
                     Image(systemName: "chevron.right")
+                        .baselineOffset(0)
+                    
+                    
                 }
+                
             }
         }
     }
