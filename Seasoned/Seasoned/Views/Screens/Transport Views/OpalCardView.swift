@@ -10,6 +10,7 @@ import SwiftUI
 struct OpalCardView: View {
     var body: some View {
         NavigationStack {
+            VStack {
                 Text("Opal cards are your key to getting around Sydney. They allow you to access each service in the Sydney transport system, simply by tapping the card on the reader. ")
                     .font(.headline)
                     .padding()
