@@ -26,9 +26,6 @@ struct MainMessageView: View {
                 .resizable()
                 .frame(width:55, height:55 )
                 .clipShape(Circle())
-             
-//            Image(systemName: "person.fill")
-//                .font(.system(size: 34, weight: .heavy))
             
             VStack(alignment: .leading, spacing: 4) {
                 
@@ -79,7 +76,7 @@ struct MainMessageView: View {
     var body: some View {
         NavigationStack {
             VStack {
-//                Text("Current UiD: \(userViewModel.user?.uid ?? "" )")
+                //                Text("Current UiD: \(userViewModel.user?.uid ?? "" )")
                 customNavBar
                 messagesView
             }
@@ -91,6 +88,11 @@ struct MainMessageView: View {
                 ChatLogView(vm: chatLogViewModel)
                     .environmentObject(UserViewModel())
             }
+//            .fullScreenCover(isPresented: $shouldNavigateToChatLogView) {
+//                ChatLogView(vm: chatLogViewModel)
+//                    .environmentObject(UserViewModel())
+//            }
+            
         }
         
     }
@@ -185,5 +187,4 @@ struct MainMessageView: View {
 #Preview {
     MainMessageView()
         .environmentObject(UserViewModel())
-//        .preferredColorScheme(.dark)
 }
