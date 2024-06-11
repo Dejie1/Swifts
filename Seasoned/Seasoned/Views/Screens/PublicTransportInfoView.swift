@@ -19,8 +19,7 @@ struct PublicTransportInfoView: View {
                     
                     Divider()
                     
-                    NavigationLink(
-                        destination: SydneyTrainsView()) {
+                    Link(destination: URL(string: "https://transportnsw.info/routes/train")!) {
                             PublicTransportRow(image: "sydneytrains",
                                                title: "Sydney Trains",
                                                description: "The train network of Sydney CBD and Greater Sydney")}
@@ -28,8 +27,7 @@ struct PublicTransportInfoView: View {
                         .padding()
                     
                     Divider()
-                    NavigationLink(
-                        destination: SydneyBusesView()) {
+                    Link(destination: URL(string: "https://transportnsw.info/routes/bus")!) {
                             PublicTransportRow(image: "sydneybuses",
                                                title: "Sydney Buses",
                                                description: "The bus network of Sydney CBD and Greater Sydney")}
@@ -38,8 +36,7 @@ struct PublicTransportInfoView: View {
                     
                     Divider()
                     
-                    NavigationLink(
-                        destination: SydneyMetroView()) {
+                    Link(destination: URL(string: "https://transportnsw.info/routes/train")!) {
                             PublicTransportRow(image: "sydneymetro2",
                                                title: "Sydney Metro",
                                                description: "The metro network connecting Chatswood and Tallawong")}
@@ -48,8 +45,7 @@ struct PublicTransportInfoView: View {
                     
                     Divider()
                     
-                    NavigationLink(
-                        destination: SydneyLightRailView()) {
+                    Link(destination: URL(string: "https://transportnsw.info/routes/lightrail")!) {
                             PublicTransportRow(image: "sydneylightrail",
                                                title: "Sydney Light Rail",
                                                description: "The light rail network of Sydney CBD and surrounding suburbs")}
@@ -58,8 +54,7 @@ struct PublicTransportInfoView: View {
                     
                     Divider()
                     
-                    NavigationLink(
-                        destination: SydneyFerriesView()) {
+                    Link(destination: URL(string: "https://transportnsw.info/routes/ferry")!) {
                             PublicTransportRow(image: "sydneyferries",
                                                title: "Sydney Ferries",
                                                description: "The ferry network of Sydney Harbour and Parramatta River")}
@@ -78,8 +73,7 @@ struct PublicTransportInfoView: View {
                     
                     Divider()
                     
-                    NavigationLink(
-                        destination: TransportAppsView()) {
+                    NavigationLink(destination: TransportAppsView()) {
                             PublicTransportRow(image: "applogo2",
                                                title: "Transport Apps",
                                                description: "There are many apps that can help find when your services leave")}
