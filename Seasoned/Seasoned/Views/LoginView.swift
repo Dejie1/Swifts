@@ -157,9 +157,10 @@ struct LoginView: View {
                 case .success(let user):
                     if user.name == "" {
                         self.showUserDetailsPage = true
-                    } else if user.hasSelectedCategories{
+                    } else if user.hasSelectedCategories == true{
                         self.showContentPage = true
                     } else {
+//                        self.showContentPage = true
                         self.showSupportAreaPage = true
                     }
                 case .failure(let error):

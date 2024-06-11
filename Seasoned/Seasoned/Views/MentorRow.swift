@@ -19,7 +19,7 @@ struct MentorRow: View {
                 .clipShape(Circle())
             
             VStack(alignment: .leading) {
-                Text(mentor.name ?? "Unknown")
+                Text(mentor.name)
                     .font(.headline)
                 Group {
                     Text("\(mentor.age ?? 0), ")
@@ -40,14 +40,19 @@ struct MentorRow: View {
 
 struct MentorRow_Previews: PreviewProvider {
     static var previews: some View {
-        MentorRow(mentor: User(data: [
-            "uid": "123",
-            "name": "John Doe",
-            "age": 25,
-            "uni": "XYZ University",
-            "course": "Computer Science",
-            "profileImageUrl": "https://example.com/profile.jpg"
-        ]))
+        MentorRow(mentor: User(
+            uid: "123",
+            email: "john.doe@example.com",
+            profileImageUrl: "https://example.com/profile.jpg",
+            userType: "Mentor",
+            selectedCategories: ["Category1", "Category2"],
+            hasSelectedCategories: true,
+            name: "John Doe",
+            about: "A brief description about John Doe.",
+            age: 25,
+            uni: "XYZ University",
+            course: "Computer Science"
+        ))
     }
 }
 

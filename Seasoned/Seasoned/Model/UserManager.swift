@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Interacts with Firebase to get data
 class UserManager {
     static let shared = UserManager()
     
@@ -15,6 +16,7 @@ class UserManager {
     
     private init() {}
     
+    //Fetch current user
     func fetchCurrentUser(completion: @escaping (Result<User, Error>) -> Void) {
         guard let uid = FirebaseManager.shared.auth.currentUser?.uid else {
             self.errorMessage = "Could not find firebase uid"
@@ -30,15 +32,21 @@ class UserManager {
                 return
             }
             
-            guard let data = snapshot?.data() else {
+            guard let snapshot = snapshot, snapshot.exists else {
                 self.errorMessage = "No data found"
                 completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data found"])))
                 return
             }
             
-            let user = User(data: data)
-            self.currentUser = user
-            completion(.success(user))
+            do {
+                let user = try snapshot.data(as: User.self)
+                self.currentUser = user
+                completion(.success(user))
+            } catch let error {
+                self.errorMessage = "Failed to decode user aa: \(error)"
+                print("Failed to decode user aa:", error)
+                completion(.failure(error))
+            }
         }
     }
     
@@ -53,6 +61,7 @@ class UserManager {
         }
     }
     
+    //Update/upload Selected categories by the user
     func updateSelectedCategories(_ categories: [String], completion: @escaping (Result<Void, Error>) -> Void) {
         guard let uid = FirebaseManager.shared.auth.currentUser?.uid else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Could not find firebase uid"])))
@@ -70,6 +79,7 @@ class UserManager {
         }
     }
     
+    //Fetch all mentors
     func fetchMentors(forCategories categories: [String], completion: @escaping ([User]) -> Void) {
         FirebaseManager.shared.firestore.collection("users").whereField("userType", isEqualTo: "Mentor").getDocuments { snapshot, error in
             if let error = error {
@@ -79,19 +89,24 @@ class UserManager {
             }
             
             let mentors = snapshot?.documents.compactMap { document -> User? in
-                let data = document.data()
-                let user = User(data: data)
-                let userCategories = user.selectedCategories ?? []
-                if userCategories.contains(where: categories.contains) {
-                    return user
+                do {
+                    let user = try document.data(as: User.self)
+                    let userCategories = user.selectedCategories ?? []
+                    if userCategories.contains(where: categories.contains) {
+                        return user
+                    }
+                    return nil
+                } catch {
+                    print("Failed to decode user mento: \(error)")
+                    return nil
                 }
-                return nil
             } ?? []
             
             completion(mentors)
         }
     }
     
+    //Upload user details from UserDetailsView
     func uploadUserDetails(name: String, about: String, age: Int, uni: String, course: String, completion: @escaping (Result<Void, Error>) -> Void) {
         guard let uid = FirebaseManager.shared.auth.currentUser?.uid else {
             completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Could not find firebase uid"])))
