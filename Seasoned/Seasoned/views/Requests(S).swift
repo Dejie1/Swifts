@@ -21,7 +21,7 @@ struct Requests_S_: View {
         // Add more chat items here
     ]
 
-    var body: some View {
+    var body: some View { 
         NavigationView {
             List {
                 ForEach(chatItems) { chatItem in
