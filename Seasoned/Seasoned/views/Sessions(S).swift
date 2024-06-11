@@ -12,11 +12,11 @@ struct Sessions_S_: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-             
+                
                 
                 List{
                     ForEach(chatItems) { chatItem in
-                              Inboxrowview(chatItem: chatItem)                    }
+                        Inboxrowview(chatItem: chatItem)                    }
                     
                 }
                 .listStyle(PlainListStyle())
@@ -27,26 +27,31 @@ struct Sessions_S_: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack{
+                        NavigationLink(destination: EmptyView()) {
+                            Image(systemName:"chevron.backward")
+                                .imageScale(.large)
+                                .foregroundColor(.primary)
+                        }
+                        Spacer()
+                        Text("Sessions")
+                            .font(.title)
+                            .bold()
                         
-                   Spacer()
-                    Text("Sessions")
-                        .font(.title)
-                        .bold()
-                    
                     }
+                    
+                    
+                    
                 }
-                
-                
             }
+            
+            
         }
-        
-      
     }
-}
-
-struct Sessions_S_Previews: PreviewProvider {
-    static var previews: some View {
-        Sessions_S_()
-        
+    
+    struct Sessions_S_Previews: PreviewProvider {
+        static var previews: some View {
+            Sessions_S_()
+            
+        }
     }
 }

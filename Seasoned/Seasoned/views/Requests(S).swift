@@ -20,39 +20,46 @@ struct Requests_S_: View {
         ChatItem(profileImage: "SarahJohnson", name: "Pam", message: "Hi, I need help with a project.", timestamp: "Fri, 30 June - 2:00 pm"),
         // Add more chat items here
     ]
-
+    
     var body: some View {
         NavigationStack {
             ScrollView{
                 
-           
-            List {
-                ForEach(chatItems) { chatItem in
-                    ConnectionRequest(chatItem: chatItem)
+                
+                List {
+                    ForEach(chatItems) { chatItem in
+                        ConnectionRequest(chatItem: chatItem)
+                    }
                 }
-            }
-            .listStyle(PlainListStyle())
-            .frame(height: UIScreen.main.bounds.height - 150)
-            
+                .listStyle(PlainListStyle())
+                .frame(height: UIScreen.main.bounds.height - 150)
+                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
-                        Spacer()
-                        Text("Requests")
-                            .font(.title)
-                            .fontWeight(.bold)
-                        
+                        NavigationLink(destination: EmptyView()) {
+                            Image(systemName:"chevron.backward")
+                                .imageScale(.large)
+                                .foregroundColor(.primary)
+                            
+                            Spacer()
+                            Text("Requests")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.black)
+                            
+                        }
                     }
                 }
             }
         }
     }
-}
-
-struct Requests_S_Previews: PreviewProvider {
-    static var previews: some View {
-        Requests_S_()
-        
+    
+    struct Requests_S_Previews: PreviewProvider {
+        static var previews: some View {
+            Requests_S_()
+            
+        }
     }
 }
