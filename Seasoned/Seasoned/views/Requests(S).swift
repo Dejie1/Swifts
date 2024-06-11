@@ -21,8 +21,11 @@ struct Requests_S_: View {
         // Add more chat items here
     ]
 
-    var body: some View { 
-        NavigationView {
+    var body: some View {
+        NavigationStack {
+            ScrollView{
+                
+           
             List {
                 ForEach(chatItems) { chatItem in
                     ConnectionRequest(chatItem: chatItem)
@@ -31,12 +34,15 @@ struct Requests_S_: View {
             .listStyle(PlainListStyle())
             .frame(height: UIScreen.main.bounds.height - 150)
             
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
+                        Spacer()
                         Text("Requests")
                             .font(.title)
                             .fontWeight(.bold)
+                        
                     }
                 }
             }

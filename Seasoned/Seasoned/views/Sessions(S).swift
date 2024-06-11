@@ -26,12 +26,14 @@ struct Sessions_S_: View {
             
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
+                    HStack{
+                        
+                   Spacer()
                     Text("Sessions")
                         .font(.title)
                         .bold()
                     
-                    
-
+                    }
                 }
                 
                 
