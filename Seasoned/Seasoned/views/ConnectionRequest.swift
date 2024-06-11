@@ -14,8 +14,9 @@ struct ConnectionRequest: View {
         HStack(alignment: .top, spacing: 12){
             Image(chatItem.profileImage)
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .clipShape(Circle())
-                .frame(width: 60, height:60)
+                .frame(width: 70, height:70)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             
             
