@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Requests_S_: View {
+    
     let chatItems: [ChatItem] = [
         ChatItem(profileImage: "DavidGreen", name: "Tim", message: "Hi, I'm John", timestamp: "Wed, 28 June - 2:00 pm - 3:00 pm"),
         ChatItem(profileImage: "DavidGreen", name: "Jim", message: "Hey, how's it going?", timestamp: "Thu, 29 June - 10:00 am"),
