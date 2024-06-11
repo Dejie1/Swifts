@@ -9,81 +9,81 @@ import SwiftUI
 
 struct MentorDescription: View {
     
-    
+    //var name: User
     
     var body: some View {
         
         //main content screen
-        ScrollView{
+
             ZStack{
-                VStack (alignment: .leading){
+                VStack{
                     
                     MentorImage()
-                        .frame(width: 400, height: 400, alignment: .center)
+                        .padding(.top, -80)
                     
-                    //Name and Popup button
-                    HStack (alignment: .top){
-                        Text("JohnDoe")
-                            .frame(alignment: .center)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                        
-                        
-                        Spacer()
-                    }
-                    .padding(.leading, 15)
-                    
-                    
-                    
-                    //description content
-                    Text("About")
-                        .font(.title3)
-                        .padding(.leading)
-                    
-                    // specific mentor user data
-                    Group{
-                        Text("Age: 24")
-                        
-                        HStack {
-                            Text("Bachelor of Computer Science")
+                    VStack (alignment: .leading){
+                        //Name and Popup button
+                        HStack (alignment: .top){
+                            Text("JohnDoe")
+                                .frame(alignment: .center)
+                                .font(.title)
+                                .fontWeight(.semibold)
+                            
+                            
                             Spacer()
-                            Text("USYD")
+                        }
+                        .padding(.leading, 15)
+                        
+                        //description content
+                        Text("About")
+                            .font(.title3)
+                            .padding(.leading)
+                            .padding(.top, 5)
+                        
+                        // specific mentor user data
+                        Group{
+                            Text("Age: 24")
+                            
+                            HStack {
+                                Text("Bachelor of Computer Science")
+                                Spacer()
+                                Text("USYD")
+                            }
+                            
+                            Text("Small Description")
+                        }
+                        .foregroundStyle(.secondary)
+                        .padding(.leading)
+                        .padding(.trailing, 20)
+                        .padding(.top, 4)
+                        
+                        
+                        // filtered categories
+                        Text("Helps In")
+                            .font(.title3)
+                            .padding()
+                        
+                        HStack{
+                            Text("Housing")
+                                .padding(.leading)
+                            
+                            Text("Finance")
+                            
+                            Text("Health")
+                            
+                            Text("Transport")
+                            
+                            Text("Events")
+                            
                         }
                         
-                        Text("Small Description")
                     }
-                    .foregroundStyle(.secondary)
-                    .padding([.leading, .trailing])
-                    
-                    
-                    // filtered categories
-                    Text("Helps In")
-                        .font(.title3)
-                        .padding()
-                    
-                    HStack{
-                        Text("Housing")
-                            .padding(.leading)
-                        
-                        Text("Finance")
-                        
-                        Text("Health")
-                        
-                        Text("Transport")
-                        
-                        Text("Events")
-                        
-                    }
-                    
                 }
                 VStack{
-                    Spacer()
                     RequestToConnectButton()
                 }
-                
             }
         }
-    }
 }
 
 #Preview {

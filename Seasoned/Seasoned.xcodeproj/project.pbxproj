@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7F99B09F2C113C7B00B35C69 /* MentorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99B09E2C113C7B00B35C69 /* MentorDescription.swift */; };
 		7F99B0A32C113CCD00B35C69 /* MentorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99B0A22C113CCD00B35C69 /* MentorImage.swift */; };
-		7F99B0B32C17D37E00B35C69 /* ConnectButtonPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99B0B22C17D37E00B35C69 /* ConnectButtonPopupView.swift */; };
 		7F99B0B52C17D4C400B35C69 /* RequestToConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99B0B42C17D4C400B35C69 /* RequestToConnectButton.swift */; };
 		E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */; };
 		E30C28BD2C0DF1B5004C9B4D /* mentorData.json in Resources */ = {isa = PBXBuildFile; fileRef = E30C28BC2C0DF1B5004C9B4D /* mentorData.json */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		7F99B09E2C113C7B00B35C69 /* MentorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDescription.swift; sourceTree = "<group>"; };
 		7F99B0A22C113CCD00B35C69 /* MentorImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorImage.swift; sourceTree = "<group>"; };
-		7F99B0B22C17D37E00B35C69 /* ConnectButtonPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectButtonPopupView.swift; sourceTree = "<group>"; };
 		7F99B0B42C17D4C400B35C69 /* RequestToConnectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToConnectButton.swift; sourceTree = "<group>"; };
 		E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportAreaView.swift; sourceTree = "<group>"; };
 		E30C28BC2C0DF1B5004C9B4D /* mentorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentorData.json; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				E3CF43EA2C10599F00258F42 /* UserDetailsView.swift */,
 				7F99B09E2C113C7B00B35C69 /* MentorDescription.swift */,
 				7F99B0B42C17D4C400B35C69 /* RequestToConnectButton.swift */,
-				7F99B0B22C17D37E00B35C69 /* ConnectButtonPopupView.swift */,
 				7F99B0A22C113CCD00B35C69 /* MentorImage.swift */,
 			);
 			path = Views;
@@ -269,7 +266,6 @@
 				7F99B0B52C17D4C400B35C69 /* RequestToConnectButton.swift in Sources */,
 				E3CF43DB2C0FEC2D00258F42 /* ImagePicker.swift in Sources */,
 				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
-				7F99B0B32C17D37E00B35C69 /* ConnectButtonPopupView.swift in Sources */,
 				E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */,
 				E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */,
 			);

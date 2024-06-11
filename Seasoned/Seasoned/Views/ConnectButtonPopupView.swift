@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ConnectButtonPopupView: View {
     @State private var text: String = ""
+    @State private var isShowingPopup = false
     
     var body: some View {
         ZStack {
-            Color.black.opacity(0.5)
+            Color.white.opacity(0.5)
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
             VStack{
@@ -35,7 +36,7 @@ struct ConnectButtonPopupView: View {
                     Spacer()
                     
                     Button("Cancel") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                        isShowingPopup.toggle()
                     }
                     .foregroundStyle(.secondary)
                     
