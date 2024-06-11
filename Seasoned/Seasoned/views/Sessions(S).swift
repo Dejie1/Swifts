@@ -40,7 +40,6 @@ struct Sessions_S_: View {
                     }
                     
                     
-                    
                 }
             }
             

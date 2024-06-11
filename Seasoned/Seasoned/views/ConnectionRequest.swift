@@ -29,16 +29,19 @@ struct ConnectionRequest: View {
                     Text("Wants to Connect")
                         .font(.subheadline)
                         .foregroundColor(.gray)
-                        .frame(maxWidth: UIScreen.main.bounds.width - 150, alignment: .leading )
+                        .frame(maxWidth: UIScreen.main.bounds.width - 120, alignment: .leading )
                         .truncationMode(.tail)
-                    Image(systemName: "chevron.right")
-                        .baselineOffset(0)
                     
+                    NavigationLink(destination: ViewA()) {
+                                            
+                    }
                     
                 }
                 
             }
         }
+        
+        
     }
 }
     struct ConnectionRequest_Previews: PreviewProvider{

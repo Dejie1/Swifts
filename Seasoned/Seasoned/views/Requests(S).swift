@@ -30,6 +30,8 @@ struct Requests_S_: View {
                 List {
                     ForEach(chatItems) { chatItem in
                         ConnectionRequest(chatItem: chatItem)
+                       
+                        
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -57,8 +59,13 @@ struct Requests_S_: View {
         }
     }
     
-    
-    
+    struct NextPageView: View {
+        var body: some View {
+            Text("Next Page")
+                .font(.title)
+                .fontWeight(.bold)
+        }
+    }
     struct Requests_S_Previews: PreviewProvider {
         static var previews: some View {
             Requests_S_()
