@@ -27,7 +27,7 @@ struct RequestToConnectButton: View {
                 .fixedSize()
                 .padding(.bottom, 175)
                 .padding(.leading, 210)
-                .padding(.top, 280)
+                .padding(.top, 295)
                 .padding(.trailing)
         
         //button function

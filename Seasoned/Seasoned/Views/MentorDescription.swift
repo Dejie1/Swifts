@@ -19,7 +19,7 @@ struct MentorDescription: View {
                 VStack{
                     
                     MentorImage()
-                        .padding(.top, -80)
+                        .padding(.top, -70)
                     
                     VStack (alignment: .leading){
                         //Name and Popup button
@@ -28,6 +28,7 @@ struct MentorDescription: View {
                                 .frame(alignment: .center)
                                 .font(.title)
                                 .fontWeight(.semibold)
+                                .padding(.top, 12)
                             
                             
                             Spacer()
@@ -38,7 +39,7 @@ struct MentorDescription: View {
                         Text("About")
                             .font(.title3)
                             .padding(.leading)
-                            .padding(.top, 5)
+                            .padding(.top, 1)
                         
                         // specific mentor user data
                         Group{
@@ -50,20 +51,22 @@ struct MentorDescription: View {
                                 Text("USYD")
                             }
                             
-                            Text("Small Description")
+                            Text("small description")
                         }
                         .foregroundStyle(.secondary)
                         .padding(.leading)
                         .padding(.trailing, 20)
                         .padding(.top, 4)
+                        .padding(.bottom, -2)
                         
                         
                         // filtered categories
                         Text("Helps In")
                             .font(.title3)
                             .padding()
+                            .padding(.top, 5)
                         
-                        HStack{
+                        HStack{ // to be filter icons
                             Text("Housing")
                                 .padding(.leading)
                             
@@ -79,6 +82,8 @@ struct MentorDescription: View {
                         
                     }
                 }
+                .padding()
+                
                 VStack{
                     RequestToConnectButton()
                 }
