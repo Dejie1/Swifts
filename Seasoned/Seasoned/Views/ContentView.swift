@@ -8,12 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var vm: UserViewModel
     var body: some View {
-//        SupportAreaView()
-        Text("Hello World")
+        TabView {
+            
+            if vm.user?.userType == "Student"{
+                SupportAreaView()
+                    .tabItem {
+                        Label("Support Area", systemImage: "star")
+                    }
+                    .environmentObject(vm)
+            } else if vm.user?.userType == "Mentor" {
+                HomeView()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                    .environmentObject(vm)
+                
+            }
+            
+            MainMessageView()
+                .tabItem {
+                    Label("Favorites", systemImage: "star")
+                }
+                .environmentObject(UserViewModel())
+            
+            
+            SettingView()
+                .tabItem {
+                    Label("Favorites", systemImage: "star")
+                }
+        }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(UserViewModel())
 }
