@@ -10,13 +10,24 @@
 		7F99B09F2C113C7B00B35C69 /* MentorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99B09E2C113C7B00B35C69 /* MentorDescription.swift */; };
 		7F99B0A32C113CCD00B35C69 /* MentorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99B0A22C113CCD00B35C69 /* MentorImage.swift */; };
 		7F99B0B52C17D4C400B35C69 /* RequestToConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F99B0B42C17D4C400B35C69 /* RequestToConnectButton.swift */; };
+		A03B1B4D2C192F2E00D06C72 /* PublicTransportRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B482C192F2E00D06C72 /* PublicTransportRow.swift */; };
+		A03B1B4E2C192F2E00D06C72 /* StudentRequestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B492C192F2E00D06C72 /* StudentRequestRow.swift */; };
+		A03B1B4F2C192F2E00D06C72 /* StudentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B4A2C192F2E00D06C72 /* StudentRow.swift */; };
+		A03B1B502C192F2E00D06C72 /* TransportAppRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B4B2C192F2E00D06C72 /* TransportAppRow.swift */; };
+		A03B1B5C2C192F4D00D06C72 /* OpalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B512C192F4D00D06C72 /* OpalCardView.swift */; };
+		A03B1B5D2C192F4D00D06C72 /* TransportAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B522C192F4D00D06C72 /* TransportAppsView.swift */; };
+		A03B1B5E2C192F4D00D06C72 /* HousingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B542C192F4D00D06C72 /* HousingInfoView.swift */; };
+		A03B1B5F2C192F4D00D06C72 /* MeetUpRequestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B552C192F4D00D06C72 /* MeetUpRequestListView.swift */; };
+		A03B1B602C192F4D00D06C72 /* MentorHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B562C192F4D00D06C72 /* MentorHomeScreen.swift */; };
+		A03B1B612C192F4D00D06C72 /* MentorMeetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B572C192F4D00D06C72 /* MentorMeetUp.swift */; };
+		A03B1B622C192F4D00D06C72 /* PublicTransportInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */; };
+		A03B1B632C192F4D00D06C72 /* StudentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B592C192F4D00D06C72 /* StudentDetail.swift */; };
+		A03B1B642C192F4D00D06C72 /* UpcomingMeetUpsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B5A2C192F4D00D06C72 /* UpcomingMeetUpsListView.swift */; };
+		A03B1B682C192F6900D06C72 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B652C192F6900D06C72 /* CategoryButton.swift */; };
 		E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */; };
 		E30C28BD2C0DF1B5004C9B4D /* mentorData.json in Resources */ = {isa = PBXBuildFile; fileRef = E30C28BC2C0DF1B5004C9B4D /* mentorData.json */; };
-		E30C28C02C0DF250004C9B4D /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28BF2C0DF250004C9B4D /* Mentor.swift */; };
-		E30C28C22C0DF2DD004C9B4D /* MentorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C12C0DF2DD004C9B4D /* MentorData.swift */; };
 		E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C32C0DF311004C9B4D /* MentorRow.swift */; };
 		E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C52C0DFB57004C9B4D /* MentorList.swift */; };
-		E3545EFC2C0F64A700452CAA /* Messaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3545EFB2C0F64A700452CAA /* Messaging.swift */; };
 		E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */; };
 		E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B532C098D7A00DEA61D /* ContentView.swift */; };
 		E37C3B562C098D7B00DEA61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C3B552C098D7B00DEA61D /* Assets.xcassets */; };
@@ -35,19 +46,38 @@
 		E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43EC2C10637000258F42 /* UserViewModel.swift */; };
 		E3CF43EF2C10732100258F42 /* MainMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43EE2C10732100258F42 /* MainMessageView.swift */; };
 		E3CF43F12C10817E00258F42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43F02C10817E00258F42 /* MainView.swift */; };
+		E3CF43F52C11454400258F42 /* CreateNewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43F42C11454400258F42 /* CreateNewMessageView.swift */; };
+		E3CF43F72C11557700258F42 /* ChatLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43F62C11557700258F42 /* ChatLogView.swift */; };
+		E3CF43FA2C11772600258F42 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43F92C11772600258F42 /* FirebaseConstants.swift */; };
+		E3CF43FC2C12C69300258F42 /* RecentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43FB2C12C69300258F42 /* RecentMessage.swift */; };
+		E3CF43FE2C12C71E00258F42 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3CF43FD2C12C71E00258F42 /* FirebaseFirestoreSwift */; };
+		E3CF44042C17D72B00258F42 /* ChatLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */; };
+		E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44052C180F2B00258F42 /* SettingView.swift */; };
+		E3CF44082C18129100258F42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44072C18129100258F42 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F99B09E2C113C7B00B35C69 /* MentorDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDescription.swift; sourceTree = "<group>"; };
 		7F99B0A22C113CCD00B35C69 /* MentorImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorImage.swift; sourceTree = "<group>"; };
 		7F99B0B42C17D4C400B35C69 /* RequestToConnectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestToConnectButton.swift; sourceTree = "<group>"; };
+		A03B1B482C192F2E00D06C72 /* PublicTransportRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportRow.swift; sourceTree = "<group>"; };
+		A03B1B492C192F2E00D06C72 /* StudentRequestRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentRequestRow.swift; sourceTree = "<group>"; };
+		A03B1B4A2C192F2E00D06C72 /* StudentRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentRow.swift; sourceTree = "<group>"; };
+		A03B1B4B2C192F2E00D06C72 /* TransportAppRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportAppRow.swift; sourceTree = "<group>"; };
+		A03B1B512C192F4D00D06C72 /* OpalCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpalCardView.swift; sourceTree = "<group>"; };
+		A03B1B522C192F4D00D06C72 /* TransportAppsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportAppsView.swift; sourceTree = "<group>"; };
+		A03B1B542C192F4D00D06C72 /* HousingInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousingInfoView.swift; sourceTree = "<group>"; };
+		A03B1B552C192F4D00D06C72 /* MeetUpRequestListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetUpRequestListView.swift; sourceTree = "<group>"; };
+		A03B1B562C192F4D00D06C72 /* MentorHomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorHomeScreen.swift; sourceTree = "<group>"; };
+		A03B1B572C192F4D00D06C72 /* MentorMeetUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorMeetUp.swift; sourceTree = "<group>"; };
+		A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportInfoView.swift; sourceTree = "<group>"; };
+		A03B1B592C192F4D00D06C72 /* StudentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDetail.swift; sourceTree = "<group>"; };
+		A03B1B5A2C192F4D00D06C72 /* UpcomingMeetUpsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingMeetUpsListView.swift; sourceTree = "<group>"; };
+		A03B1B652C192F6900D06C72 /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportAreaView.swift; sourceTree = "<group>"; };
 		E30C28BC2C0DF1B5004C9B4D /* mentorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentorData.json; sourceTree = "<group>"; };
-		E30C28BF2C0DF250004C9B4D /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
-		E30C28C12C0DF2DD004C9B4D /* MentorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorData.swift; sourceTree = "<group>"; };
 		E30C28C32C0DF311004C9B4D /* MentorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorRow.swift; sourceTree = "<group>"; };
 		E30C28C52C0DFB57004C9B4D /* MentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorList.swift; sourceTree = "<group>"; };
-		E3545EFB2C0F64A700452CAA /* Messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messaging.swift; sourceTree = "<group>"; };
 		E37C3B4E2C098D7A00DEA61D /* Seasoned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seasoned.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonedApp.swift; sourceTree = "<group>"; };
 		E37C3B532C098D7A00DEA61D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +92,13 @@
 		E3CF43EC2C10637000258F42 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		E3CF43EE2C10732100258F42 /* MainMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMessageView.swift; sourceTree = "<group>"; };
 		E3CF43F02C10817E00258F42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E3CF43F42C11454400258F42 /* CreateNewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewMessageView.swift; sourceTree = "<group>"; };
+		E3CF43F62C11557700258F42 /* ChatLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogView.swift; sourceTree = "<group>"; };
+		E3CF43F92C11772600258F42 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
+		E3CF43FB2C12C69300258F42 /* RecentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessage.swift; sourceTree = "<group>"; };
+		E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewModel.swift; sourceTree = "<group>"; };
+		E3CF44052C180F2B00258F42 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		E3CF44072C18129100258F42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +111,56 @@
 				E3CF43DE2C0FF8FD00258F42 /* FirebaseFirestore in Frameworks */,
 				E3CF43D52C0FE5D600258F42 /* FirebaseAuth in Frameworks */,
 				E3CF43D72C0FE5D600258F42 /* FirebaseStorage in Frameworks */,
+				E3CF43FE2C12C71E00258F42 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A03B1B4C2C192F2E00D06C72 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B482C192F2E00D06C72 /* PublicTransportRow.swift */,
+				A03B1B492C192F2E00D06C72 /* StudentRequestRow.swift */,
+				A03B1B4A2C192F2E00D06C72 /* StudentRow.swift */,
+				A03B1B4B2C192F2E00D06C72 /* TransportAppRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		A03B1B532C192F4D00D06C72 /* Transport Views */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B512C192F4D00D06C72 /* OpalCardView.swift */,
+				A03B1B522C192F4D00D06C72 /* TransportAppsView.swift */,
+			);
+			path = "Transport Views";
+			sourceTree = "<group>";
+		};
+		A03B1B5B2C192F4D00D06C72 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B542C192F4D00D06C72 /* HousingInfoView.swift */,
+				A03B1B552C192F4D00D06C72 /* MeetUpRequestListView.swift */,
+				A03B1B562C192F4D00D06C72 /* MentorHomeScreen.swift */,
+				A03B1B572C192F4D00D06C72 /* MentorMeetUp.swift */,
+				A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */,
+				A03B1B592C192F4D00D06C72 /* StudentDetail.swift */,
+				A03B1B5A2C192F4D00D06C72 /* UpcomingMeetUpsListView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A03B1B672C192F6900D06C72 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B652C192F6900D06C72 /* CategoryButton.swift */,
+			);
+			name = Extras;
+			path = Seasoned/Views/Extras;
+			sourceTree = SOURCE_ROOT;
+		};
 		E30C28BB2C0DF177004C9B4D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,12 +172,13 @@
 		E30C28BE2C0DF22E004C9B4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E3CF43DA2C0FEC2D00258F42 /* ImagePicker.swift */,
-				E30C28BF2C0DF250004C9B4D /* Mentor.swift */,
-				E30C28C12C0DF2DD004C9B4D /* MentorData.swift */,
 				E3CF43E42C101D9900258F42 /* User.swift */,
+				E3CF43FB2C12C69300258F42 /* RecentMessage.swift */,
+				E3CF43F92C11772600258F42 /* FirebaseConstants.swift */,
+				E3CF43DA2C0FEC2D00258F42 /* ImagePicker.swift */,
 				E3CF43E82C102A2B00258F42 /* UserManager.swift */,
 				E3CF43EC2C10637000258F42 /* UserViewModel.swift */,
+				E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,13 +224,18 @@
 		E3CF43CE2C0FE35D00258F42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A03B1B532C192F4D00D06C72 /* Transport Views */,
+				A03B1B672C192F6900D06C72 /* Extras */,
+				A03B1B5B2C192F4D00D06C72 /* Screens */,
+				E3CF44012C17222E00258F42 /* Messages */,
+				A03B1B4C2C192F2E00D06C72 /* Rows */,
+				E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */,
 				E37C3B532C098D7A00DEA61D /* ContentView.swift */,
+				E3CF44072C18129100258F42 /* HomeView.swift */,
+				E3CF44052C180F2B00258F42 /* SettingView.swift */,
 				E3CF43CF2C0FE37200258F42 /* LoginView.swift */,
-				E3CF43EE2C10732100258F42 /* MainMessageView.swift */,
 				E30C28C52C0DFB57004C9B4D /* MentorList.swift */,
 				E30C28C32C0DF311004C9B4D /* MentorRow.swift */,
-				E3545EFB2C0F64A700452CAA /* Messaging.swift */,
-				E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */,
 				E3CF43F02C10817E00258F42 /* MainView.swift */,
 				E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */,
 				E3CF43EA2C10599F00258F42 /* UserDetailsView.swift */,
@@ -164,6 +251,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3CF44012C17222E00258F42 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				E3CF43EE2C10732100258F42 /* MainMessageView.swift */,
+				E3CF43F62C11557700258F42 /* ChatLogView.swift */,
+				E3CF43F42C11454400258F42 /* CreateNewMessageView.swift */,
+			);
+			path = Messages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +285,7 @@
 				E3CF43D62C0FE5D600258F42 /* FirebaseStorage */,
 				E3CF43DD2C0FF8FD00258F42 /* FirebaseFirestore */,
 				E3CF43E22C1007F200258F42 /* SDWebImageSwiftUI */,
+				E3CF43FD2C12C71E00258F42 /* FirebaseFirestoreSwift */,
 			);
 			productName = Seasoned;
 			productReference = E37C3B4E2C098D7A00DEA61D /* Seasoned.app */;
@@ -251,22 +349,42 @@
 			files = (
 				E3CF43EB2C10599F00258F42 /* UserDetailsView.swift in Sources */,
 				E3CF43E92C102A2B00258F42 /* UserManager.swift in Sources */,
+				A03B1B602C192F4D00D06C72 /* MentorHomeScreen.swift in Sources */,
 				E3CF43EF2C10732100258F42 /* MainMessageView.swift in Sources */,
 				E3545EFC2C0F64A700452CAA /* Messaging.swift in Sources */,
 				7F99B09F2C113C7B00B35C69 /* MentorDescription.swift in Sources */,
 				E30C28C02C0DF250004C9B4D /* Mentor.swift in Sources */,
+				A03B1B5E2C192F4D00D06C72 /* HousingInfoView.swift in Sources */,
+				E3CF43FC2C12C69300258F42 /* RecentMessage.swift in Sources */,
 				E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */,
+				E3CF44042C17D72B00258F42 /* ChatLogViewModel.swift in Sources */,
+				A03B1B632C192F4D00D06C72 /* StudentDetail.swift in Sources */,
+				A03B1B4F2C192F2E00D06C72 /* StudentRow.swift in Sources */,
 				E3CF43D02C0FE37200258F42 /* LoginView.swift in Sources */,
+				A03B1B622C192F4D00D06C72 /* PublicTransportInfoView.swift in Sources */,
 				E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */,
+				A03B1B682C192F6900D06C72 /* CategoryButton.swift in Sources */,
 				E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */,
 				7F99B0A32C113CCD00B35C69 /* MentorImage.swift in Sources */,
 				E3CF43F12C10817E00258F42 /* MainView.swift in Sources */,
-				E30C28C22C0DF2DD004C9B4D /* MentorData.swift in Sources */,
+				A03B1B4E2C192F2E00D06C72 /* StudentRequestRow.swift in Sources */,
+				E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */,
+				A03B1B4D2C192F2E00D06C72 /* PublicTransportRow.swift in Sources */,
+				A03B1B5D2C192F4D00D06C72 /* TransportAppsView.swift in Sources */,
+				A03B1B502C192F2E00D06C72 /* TransportAppRow.swift in Sources */,
+				E3CF43F52C11454400258F42 /* CreateNewMessageView.swift in Sources */,
+				A03B1B5F2C192F4D00D06C72 /* MeetUpRequestListView.swift in Sources */,
+				E3CF43F72C11557700258F42 /* ChatLogView.swift in Sources */,
+				E3CF44082C18129100258F42 /* HomeView.swift in Sources */,
+				A03B1B5C2C192F4D00D06C72 /* OpalCardView.swift in Sources */,
 				E3CF43E52C101D9900258F42 /* User.swift in Sources */,
 				7F99B0B52C17D4C400B35C69 /* RequestToConnectButton.swift in Sources */,
+				A03B1B612C192F4D00D06C72 /* MentorMeetUp.swift in Sources */,
 				E3CF43DB2C0FEC2D00258F42 /* ImagePicker.swift in Sources */,
+				E3CF43FA2C11772600258F42 /* FirebaseConstants.swift in Sources */,
 				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
 				E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */,
+				A03B1B642C192F4D00D06C72 /* UpcomingMeetUpsListView.swift in Sources */,
 				E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +634,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E3CF43E12C1007F200258F42 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		E3CF43FD2C12C71E00258F42 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3CF43D12C0FE5D600258F42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

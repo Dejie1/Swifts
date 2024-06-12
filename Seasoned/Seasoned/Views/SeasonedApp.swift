@@ -26,6 +26,7 @@ class FirebaseManager: NSObject {
     let firestore: Firestore
     
     static let shared = FirebaseManager()
+    var currentUser: User?
     
     override init() {
         self.auth = Auth.auth()
@@ -43,7 +44,8 @@ struct SeasonedApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainMessageView()
+            LoginView(didCompleteLoginProcess: {})
+                .environmentObject(UserViewModel())
         }
     }
 }
