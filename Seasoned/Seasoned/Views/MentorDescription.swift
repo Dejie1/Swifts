@@ -9,10 +9,6 @@ import SwiftUI
 
 struct MentorDescription: View {
     
-    //@EnvironmentObject var viewModel: UserViewModel
-  // @ObservedObject var viewModel = UserViewModel()
-   // var selectedCategories: [String]
-    
     var mentor: Mentor
     
     var body: some View {
@@ -109,5 +105,3 @@ struct MentorDescription: View {
             return MentorDescription(mentor: mentor)
         
 }
-
-//selectedCategories: [],
