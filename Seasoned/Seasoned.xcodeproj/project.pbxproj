@@ -68,7 +68,7 @@
 			path = SeasonedStudents;
 			sourceTree = "<group>";
 		};
-		CCE9A9A32C0FEC5000558C9A /* views */ = {
+		CCE9A9A32C0FEC5000558C9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CCE9A9A42C0FEC6000558C9A /* ViewA.swift */,
@@ -79,7 +79,7 @@
 				CCE9A9B22C109AED00558C9A /* Inboxrowview.swift */,
 				CCE9A9B62C115F0A00558C9A /* ConnectionRequest.swift */,
 			);
-			path = views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E30C28BB2C0DF177004C9B4D /* Resources */ = {
@@ -118,7 +118,7 @@
 		E37C3B502C098D7A00DEA61D /* Seasoned */ = {
 			isa = PBXGroup;
 			children = (
-				CCE9A9A32C0FEC5000558C9A /* views */,
+				CCE9A9A32C0FEC5000558C9A /* Views */,
 				CCE9A9A02C0FEA4000558C9A /* SeasonedStudents */,
 				E30C28C32C0DF311004C9B4D /* MentorRow.swift */,
 				E30C28C52C0DFB57004C9B4D /* MentorList.swift */,
