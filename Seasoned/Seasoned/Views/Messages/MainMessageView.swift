@@ -88,10 +88,6 @@ struct MainMessageView: View {
                 ChatLogView(vm: chatLogViewModel)
                     .environmentObject(UserViewModel())
             }
-//            .fullScreenCover(isPresented: $shouldNavigateToChatLogView) {
-//                ChatLogView(vm: chatLogViewModel)
-//                    .environmentObject(UserViewModel())
-//            }
             
         }
         
