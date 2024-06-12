@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC5A6D712C19247300D39B75 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A6D702C19247300D39B75 /* SessionView.swift */; };
+		CC5A6D732C1924A200D39B75 /* RequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A6D722C1924A200D39B75 /* RequestView.swift */; };
+		CC5A6D752C1924DB00D39B75 /* ConnectionRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A6D742C1924DB00D39B75 /* ConnectionRequestView.swift */; };
+		CC5A6D772C1924FD00D39B75 /* InboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A6D762C1924FD00D39B75 /* InboxRowView.swift */; };
 		E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */; };
 		E30C28BD2C0DF1B5004C9B4D /* mentorData.json in Resources */ = {isa = PBXBuildFile; fileRef = E30C28BC2C0DF1B5004C9B4D /* mentorData.json */; };
 		E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C32C0DF311004C9B4D /* MentorRow.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC5A6D702C19247300D39B75 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		CC5A6D722C1924A200D39B75 /* RequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestView.swift; sourceTree = "<group>"; };
+		CC5A6D742C1924DB00D39B75 /* ConnectionRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRequestView.swift; sourceTree = "<group>"; };
+		CC5A6D762C1924FD00D39B75 /* InboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRowView.swift; sourceTree = "<group>"; };
 		E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportAreaView.swift; sourceTree = "<group>"; };
 		E30C28BC2C0DF1B5004C9B4D /* mentorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentorData.json; sourceTree = "<group>"; };
 		E30C28C32C0DF311004C9B4D /* MentorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorRow.swift; sourceTree = "<group>"; };
@@ -150,6 +158,10 @@
 				E3CF44012C17222E00258F42 /* Messages */,
 				E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */,
 				E37C3B532C098D7A00DEA61D /* ContentView.swift */,
+				CC5A6D702C19247300D39B75 /* SessionView.swift */,
+				CC5A6D722C1924A200D39B75 /* RequestView.swift */,
+				CC5A6D742C1924DB00D39B75 /* ConnectionRequestView.swift */,
+				CC5A6D762C1924FD00D39B75 /* InboxRowView.swift */,
 				E3CF44072C18129100258F42 /* HomeView.swift */,
 				E3CF44052C180F2B00258F42 /* SettingView.swift */,
 				E3CF43CF2C0FE37200258F42 /* LoginView.swift */,
@@ -270,16 +282,20 @@
 				E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */,
 				E3CF44042C17D72B00258F42 /* ChatLogViewModel.swift in Sources */,
 				E3CF43D02C0FE37200258F42 /* LoginView.swift in Sources */,
+				CC5A6D712C19247300D39B75 /* SessionView.swift in Sources */,
 				E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */,
 				E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */,
+				CC5A6D752C1924DB00D39B75 /* ConnectionRequestView.swift in Sources */,
 				E3CF43F12C10817E00258F42 /* MainView.swift in Sources */,
 				E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */,
 				E3CF43F52C11454400258F42 /* CreateNewMessageView.swift in Sources */,
 				E3CF43F72C11557700258F42 /* ChatLogView.swift in Sources */,
 				E3CF44082C18129100258F42 /* HomeView.swift in Sources */,
+				CC5A6D772C1924FD00D39B75 /* InboxRowView.swift in Sources */,
 				E3CF43E52C101D9900258F42 /* User.swift in Sources */,
 				E3CF43DB2C0FEC2D00258F42 /* ImagePicker.swift in Sources */,
 				E3CF43FA2C11772600258F42 /* FirebaseConstants.swift in Sources */,
+				CC5A6D732C1924A200D39B75 /* RequestView.swift in Sources */,
 				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
 				E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */,
 				E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */,
