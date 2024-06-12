@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct MentorImage: View {
-    
-    var image: Image
-    
+
     var body: some View {
-        image
+        Image("JohnDoe")
             .resizable()
             .scaledToFit()
             .clipShape(RoundedRectangle(cornerRadius:25))
@@ -21,5 +19,5 @@ struct MentorImage: View {
 }
 
 #Preview {
-    MentorImage(image: Image(systemName: "person.fill"))
+    MentorImage()
 }
