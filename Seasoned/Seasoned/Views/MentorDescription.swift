@@ -10,7 +10,10 @@ import SwiftUI
 struct MentorDescription: View {
     
     //@EnvironmentObject var viewModel: UserViewModel
-    //var name: User
+  // @ObservedObject var viewModel = UserViewModel()
+   // var selectedCategories: [String]
+    
+    var mentor: Mentor
     
     var body: some View {
         
@@ -19,17 +22,17 @@ struct MentorDescription: View {
             ZStack{
                 VStack{
                     
-                    MentorImage()
+                    MentorImage(image: mentor.image)
                         .padding(.top, -70)
                     
                     VStack (alignment: .leading){
                         //Name and Popup button
                         HStack (alignment: .top){
-                            Text("John Doe")
+                            Text(mentor.name)
                                 .frame(maxWidth: 185, alignment: .leading)
                                 .font(.title)
                                 .fontWeight(.semibold)
-                                .padding(.top, 12)
+                                .padding(.top, -20)
                             
                             
                             Spacer()
@@ -44,15 +47,15 @@ struct MentorDescription: View {
                         
                         // specific mentor user data
                         Group{
-                            Text("Age: 24")
+                            Text("Age: \(mentor.age)")
                             
                             HStack {
-                                Text("Bachelor of Computer Science")
+                                Text(mentor.course)
                                 Spacer()
-                                Text("USYD")
+                                Text(mentor.uni)
                             }
                             
-                            Text("small description")
+                            //Text("small description")
                         }
                         .foregroundStyle(.secondary)
                         .padding(.leading)
@@ -93,5 +96,18 @@ struct MentorDescription: View {
 }
 
 #Preview {
-    MentorDescription()
+    //MentorDescription(mentor: Mentor [data: [String: Any]])
+    let mentorData: [String: Any] = [
+                "uid": "1",
+                "name": "John Doe",
+                "age": 30,
+                "uni": "UTS",
+                "course": "Bachelor of Computer Science",
+                "profileImageUrl": "profile_image_url"
+            ]
+            let mentor = Mentor(data: mentorData)
+            return MentorDescription(mentor: mentor)
+        
 }
+
+//selectedCategories: [],

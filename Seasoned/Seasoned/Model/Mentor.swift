@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Mentor: Identifiable, Hashable, Decodable {
+struct Mentor: Identifiable, Hashable, Codable {
     var id: String { uid }
-    let uid: String
-    let name: String
-    let age: Int
-    let uni: String
-    let course: String
-    let profileImageUrl: String
+    var uid: String
+    var name: String
+    var age: Int
+    var uni: String
+    var course: String
+    var profileImageUrl: String
     
     // Custom initializer for initializing from a dictionary
     init(data: [String: Any]) {
