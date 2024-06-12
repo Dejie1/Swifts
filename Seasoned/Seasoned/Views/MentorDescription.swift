@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MentorDescription: View {
     
+    //@EnvironmentObject var viewModel: UserViewModel
     //var name: User
     
     var body: some View {
@@ -24,8 +25,8 @@ struct MentorDescription: View {
                     VStack (alignment: .leading){
                         //Name and Popup button
                         HStack (alignment: .top){
-                            Text("JohnDoe")
-                                .frame(alignment: .center)
+                            Text("John Doe")
+                                .frame(maxWidth: 185, alignment: .leading)
                                 .font(.title)
                                 .fontWeight(.semibold)
                                 .padding(.top, 12)
