@@ -19,6 +19,24 @@ struct MainMessageView: View {
     @State var user: User?
     
     
+    private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
+    var body: some View {
+        NavigationStack {
+            VStack {
+                customNavBar
+                messagesView
+            }
+            .overlay(
+                newMessageButton, alignment: .bottom)
+            .navigationBarHidden(true)
+            .navigationDestination(isPresented: $shouldNavigateToChatLogView){
+                ChatLogView(vm: chatLogViewModel)
+                    .environmentObject(UserViewModel())
+            }
+        }
+    }
+    
+    
     private var customNavBar: some View {
         HStack(spacing: 16) {
             
@@ -72,27 +90,6 @@ struct MainMessageView: View {
         })
     }
     
-    private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
-    var body: some View {
-        NavigationStack {
-            VStack {
-                //                Text("Current UiD: \(userViewModel.user?.uid ?? "" )")
-                customNavBar
-                messagesView
-            }
-            
-            .overlay(
-                newMessageButton, alignment: .bottom)
-            .navigationBarHidden(true)
-            .navigationDestination(isPresented: $shouldNavigateToChatLogView){
-                ChatLogView(vm: chatLogViewModel)
-                    .environmentObject(UserViewModel())
-            }
-            
-        }
-        
-    }
-    
     private var messagesView: some View {
         ScrollView {
             ForEach(userViewModel.recentMessages) { recentMessage in
@@ -114,7 +111,6 @@ struct MainMessageView: View {
                             uni: nil,                          // Optional, can be nil
                             course: nil                        // Optional, can be nil
                         )
-                        
                         
                         self.chatLogViewModel.chatUser = self.user
                         self.chatLogViewModel.fetchMessages()

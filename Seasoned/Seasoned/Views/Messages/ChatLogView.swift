@@ -24,7 +24,6 @@ struct ChatLogView: View {
             messagesView
             Text(vm.errorMessage)
         }
-//        .navigationBarBackButtonHidden(true)
         .onDisappear(){
             vm.firestoreListener?.remove()
         }
@@ -37,7 +36,7 @@ struct ChatLogView: View {
     
     private var messagesView: some View {
         VStack {
-            if #available(iOS 15.0, *) {
+            if #available(iOS 15.0, *){
                 ScrollView {
                     ScrollViewReader { scrollViewProxy in
                         VStack {
@@ -60,10 +59,7 @@ struct ChatLogView: View {
                     chatBottomBar
                         .background(Color(.systemBackground).ignoresSafeArea())
                 }
-            } else {
-                // Fallback on earlier versions
             }
-
         }
     }
     

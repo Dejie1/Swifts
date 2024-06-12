@@ -11,6 +11,7 @@
 		E30C28BD2C0DF1B5004C9B4D /* mentorData.json in Resources */ = {isa = PBXBuildFile; fileRef = E30C28BC2C0DF1B5004C9B4D /* mentorData.json */; };
 		E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C32C0DF311004C9B4D /* MentorRow.swift */; };
 		E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C52C0DFB57004C9B4D /* MentorList.swift */; };
+		E310D0012C19AA540035977E /* MentorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E310D0002C19AA540035977E /* MentorDetailView.swift */; };
 		E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */; };
 		E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B532C098D7A00DEA61D /* ContentView.swift */; };
 		E37C3B562C098D7B00DEA61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C3B552C098D7B00DEA61D /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		E30C28BC2C0DF1B5004C9B4D /* mentorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentorData.json; sourceTree = "<group>"; };
 		E30C28C32C0DF311004C9B4D /* MentorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorRow.swift; sourceTree = "<group>"; };
 		E30C28C52C0DFB57004C9B4D /* MentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorList.swift; sourceTree = "<group>"; };
+		E310D0002C19AA540035977E /* MentorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDetailView.swift; sourceTree = "<group>"; };
 		E37C3B4E2C098D7A00DEA61D /* Seasoned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seasoned.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonedApp.swift; sourceTree = "<group>"; };
 		E37C3B532C098D7A00DEA61D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				E3CF44052C180F2B00258F42 /* SettingView.swift */,
 				E3CF43CF2C0FE37200258F42 /* LoginView.swift */,
 				E30C28C52C0DFB57004C9B4D /* MentorList.swift */,
+				E310D0002C19AA540035977E /* MentorDetailView.swift */,
 				E30C28C32C0DF311004C9B4D /* MentorRow.swift */,
 				E3CF43F02C10817E00258F42 /* MainView.swift */,
 				E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */,
@@ -282,6 +285,7 @@
 				E3CF43FA2C11772600258F42 /* FirebaseConstants.swift in Sources */,
 				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
 				E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */,
+				E310D0012C19AA540035977E /* MentorDetailView.swift in Sources */,
 				E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

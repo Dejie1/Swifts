@@ -17,26 +17,26 @@ struct ContentView: View {
                     .tabItem {
                         Label("Support Area", systemImage: "star")
                     }
-                    .environmentObject(vm)
+//                    .environmentObject(vm)
             } else if vm.user?.userType == "Mentor" {
                 HomeView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
-                    .environmentObject(vm)
+//                    .environmentObject(vm)
                 
             }
             
             MainMessageView()
                 .tabItem {
-                    Label("Favorites", systemImage: "star")
+                    Label("Messaging", systemImage: "bubble.left.circle.fill")
                 }
-                .environmentObject(UserViewModel())
+//                .environmentObject(UserViewModel())
             
             
             SettingView()
                 .tabItem {
-                    Label("Favorites", systemImage: "star")
+                    Label("Profile", systemImage: "person.circle.fill")
                 }
         }
     }
