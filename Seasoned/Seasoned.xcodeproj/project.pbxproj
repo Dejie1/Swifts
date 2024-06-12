@@ -35,6 +35,8 @@
 		E3CF43FC2C12C69300258F42 /* RecentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43FB2C12C69300258F42 /* RecentMessage.swift */; };
 		E3CF43FE2C12C71E00258F42 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3CF43FD2C12C71E00258F42 /* FirebaseFirestoreSwift */; };
 		E3CF44042C17D72B00258F42 /* ChatLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */; };
+		E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44052C180F2B00258F42 /* SettingView.swift */; };
+		E3CF44082C18129100258F42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44072C18129100258F42 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		E3CF43F92C11772600258F42 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		E3CF43FB2C12C69300258F42 /* RecentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessage.swift; sourceTree = "<group>"; };
 		E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewModel.swift; sourceTree = "<group>"; };
+		E3CF44052C180F2B00258F42 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		E3CF44072C18129100258F42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				E3CF44012C17222E00258F42 /* Messages */,
 				E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */,
 				E37C3B532C098D7A00DEA61D /* ContentView.swift */,
+				E3CF44072C18129100258F42 /* HomeView.swift */,
+				E3CF44052C180F2B00258F42 /* SettingView.swift */,
 				E3CF43CF2C0FE37200258F42 /* LoginView.swift */,
 				E30C28C52C0DFB57004C9B4D /* MentorList.swift */,
 				E30C28C32C0DF311004C9B4D /* MentorRow.swift */,
@@ -267,8 +273,10 @@
 				E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */,
 				E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */,
 				E3CF43F12C10817E00258F42 /* MainView.swift in Sources */,
+				E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */,
 				E3CF43F52C11454400258F42 /* CreateNewMessageView.swift in Sources */,
 				E3CF43F72C11557700258F42 /* ChatLogView.swift in Sources */,
+				E3CF44082C18129100258F42 /* HomeView.swift in Sources */,
 				E3CF43E52C101D9900258F42 /* User.swift in Sources */,
 				E3CF43DB2C0FEC2D00258F42 /* ImagePicker.swift in Sources */,
 				E3CF43FA2C11772600258F42 /* FirebaseConstants.swift in Sources */,

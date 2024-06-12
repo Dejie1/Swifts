@@ -85,9 +85,16 @@ struct UserDetailsView: View {
             .padding()
         }
         .navigationDestination(isPresented: $showSupportPage){
-            SupportAreaView()
-                .environmentObject(UserViewModel())
-                .navigationBarBackButtonHidden(true)
+            if viewModel.user?.userType == "Student" {
+                ContentView()
+                    .environmentObject(UserViewModel())
+                    .navigationBarBackButtonHidden(true)
+            } else if viewModel.user?.userType == "Mentor" {
+                SupportAreaView()
+                    .environmentObject(UserViewModel())
+                    .navigationBarBackButtonHidden(true)
+                
+            }
         }
     }
     

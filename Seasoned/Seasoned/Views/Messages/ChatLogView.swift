@@ -24,9 +24,11 @@ struct ChatLogView: View {
             messagesView
             Text(vm.errorMessage)
         }
+//        .navigationBarBackButtonHidden(true)
         .onDisappear(){
             vm.firestoreListener?.remove()
         }
+        
         .navigationTitle(vm.chatUser?.name ?? "")
             .navigationBarTitleDisplayMode(.inline)
     }

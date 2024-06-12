@@ -102,7 +102,7 @@ struct LoginView: View {
                 }
                 // NavigationLink to different pages
                 .navigationDestination(isPresented: $showContentPage){
-                    MainMessageView()
+                    ContentView()
                         .environmentObject(UserViewModel())
                         .navigationBarBackButtonHidden(true)
                 }
@@ -157,11 +157,10 @@ struct LoginView: View {
                 case .success(let user):
                     if user.name == "" {
                         self.showUserDetailsPage = true
-                    } else if user.hasSelectedCategories == true{
-                        self.showContentPage = true
-                    } else {
-//                        self.showContentPage = true
+                    } else if user.hasSelectedCategories == false && user.userType == "Mentor"{
                         self.showSupportAreaPage = true
+                    } else {
+                        self.showContentPage = true
                     }
                 case .failure(let error):
                     print("Failed to fetch user after login:", error)
