@@ -43,8 +43,18 @@ struct MentorList: View {
                         .font(.title2)
                         .fontWeight(.semibold)
                 }
-                .padding(.leading, 20)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading,20)
+                .frame(maxWidth:.infinity, alignment: .leading)
+                if selectedCategories == ["Transport"] {
+                    NavigationLink(destination: PublicTransportInfoView()) {
+                        Text("Get more Information")
+                            .font(.headline)
+                            .underline()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 20)
+                    }
+                }
+                        
                 Divider()
                 
                 if viewModel.errorMessage.isEmpty && filteredMentors.isEmpty {

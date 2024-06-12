@@ -34,18 +34,18 @@ struct SupportAreaView: View {
                 
                 VStack(spacing: 25) {
                     HStack(spacing: 40) {
-                        CategoryButton(iconName: "dollarsign.circle", label: "Finance", color: Color(red: 0, green: 0.588, blue: 0.533), selectedCategories: $selectedCategories)
-                        CategoryButton(iconName: "house.fill", label: "Housing", color: Color(red:0.29804, green:0.68627, blue:0.31373), selectedCategories: $selectedCategories)
+                        CategoryButton2(iconName: "dollarsign.circle", label: "Finance", color: Color(red: 0, green: 0.588, blue: 0.533), selectedCategories: $selectedCategories)
+                        CategoryButton2(iconName: "house.fill", label: "Housing", color: Color(red:0.29804, green:0.68627, blue:0.31373), selectedCategories: $selectedCategories)
                     }
                     
                     HStack(spacing: 40) {
-                        CategoryButton(iconName: "cross.circle.fill", label: "Health", color: Color(red:0.12941, green:0.58824, blue:0.95294), selectedCategories: $selectedCategories)
-                        CategoryButton(iconName: "graduationcap.fill", label: "Education", color: Color(red:1.00000, green:0.59608, blue:0.00000), selectedCategories: $selectedCategories)
+                        CategoryButton2(iconName: "cross.circle.fill", label: "Health", color: Color(red:0.12941, green:0.58824, blue:0.95294), selectedCategories: $selectedCategories)
+                        CategoryButton2(iconName: "graduationcap.fill", label: "Education", color: Color(red:1.00000, green:0.59608, blue:0.00000), selectedCategories: $selectedCategories)
                     }
                     
                     HStack(spacing: 40) {
-                        CategoryButton(iconName: "tram.fill", label: "Transport", color: Color(red:0.95686, green:0.26275, blue:0.21176), selectedCategories: $selectedCategories)
-                        CategoryButton(iconName: "person.3.fill", label: "Events", color: Color(red:0.61176, green:0.15294, blue:0.69020), selectedCategories: $selectedCategories)
+                        CategoryButton2(iconName: "tram.fill", label: "Transport", color: Color(red:0.95686, green:0.26275, blue:0.21176), selectedCategories: $selectedCategories)
+                        CategoryButton2(iconName: "person.3.fill", label: "Events", color: Color(red:0.61176, green:0.15294, blue:0.69020), selectedCategories: $selectedCategories)
                     }
                 }
                 
@@ -109,7 +109,7 @@ struct SupportAreaView: View {
     }
 }
 
-struct CategoryButton: View {
+struct CategoryButton2: View {
     var iconName: String
     var label: String
     var color: Color
