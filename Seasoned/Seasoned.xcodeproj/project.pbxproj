@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A03B1B4D2C192F2E00D06C72 /* PublicTransportRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B482C192F2E00D06C72 /* PublicTransportRow.swift */; };
+		A03B1B4E2C192F2E00D06C72 /* StudentRequestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B492C192F2E00D06C72 /* StudentRequestRow.swift */; };
+		A03B1B4F2C192F2E00D06C72 /* StudentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B4A2C192F2E00D06C72 /* StudentRow.swift */; };
+		A03B1B502C192F2E00D06C72 /* TransportAppRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B4B2C192F2E00D06C72 /* TransportAppRow.swift */; };
+		A03B1B5C2C192F4D00D06C72 /* OpalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B512C192F4D00D06C72 /* OpalCardView.swift */; };
+		A03B1B5D2C192F4D00D06C72 /* TransportAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B522C192F4D00D06C72 /* TransportAppsView.swift */; };
+		A03B1B5E2C192F4D00D06C72 /* HousingInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B542C192F4D00D06C72 /* HousingInfoView.swift */; };
+		A03B1B5F2C192F4D00D06C72 /* MeetUpRequestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B552C192F4D00D06C72 /* MeetUpRequestListView.swift */; };
+		A03B1B602C192F4D00D06C72 /* MentorHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B562C192F4D00D06C72 /* MentorHomeScreen.swift */; };
+		A03B1B612C192F4D00D06C72 /* MentorMeetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B572C192F4D00D06C72 /* MentorMeetUp.swift */; };
+		A03B1B622C192F4D00D06C72 /* PublicTransportInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */; };
+		A03B1B632C192F4D00D06C72 /* StudentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B592C192F4D00D06C72 /* StudentDetail.swift */; };
+		A03B1B642C192F4D00D06C72 /* UpcomingMeetUpsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B5A2C192F4D00D06C72 /* UpcomingMeetUpsListView.swift */; };
+		A03B1B682C192F6900D06C72 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B652C192F6900D06C72 /* CategoryButton.swift */; };
 		E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */; };
 		E30C28BD2C0DF1B5004C9B4D /* mentorData.json in Resources */ = {isa = PBXBuildFile; fileRef = E30C28BC2C0DF1B5004C9B4D /* mentorData.json */; };
 		E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C32C0DF311004C9B4D /* MentorRow.swift */; };
@@ -40,6 +54,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A03B1B482C192F2E00D06C72 /* PublicTransportRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportRow.swift; sourceTree = "<group>"; };
+		A03B1B492C192F2E00D06C72 /* StudentRequestRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentRequestRow.swift; sourceTree = "<group>"; };
+		A03B1B4A2C192F2E00D06C72 /* StudentRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentRow.swift; sourceTree = "<group>"; };
+		A03B1B4B2C192F2E00D06C72 /* TransportAppRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportAppRow.swift; sourceTree = "<group>"; };
+		A03B1B512C192F4D00D06C72 /* OpalCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpalCardView.swift; sourceTree = "<group>"; };
+		A03B1B522C192F4D00D06C72 /* TransportAppsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportAppsView.swift; sourceTree = "<group>"; };
+		A03B1B542C192F4D00D06C72 /* HousingInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousingInfoView.swift; sourceTree = "<group>"; };
+		A03B1B552C192F4D00D06C72 /* MeetUpRequestListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetUpRequestListView.swift; sourceTree = "<group>"; };
+		A03B1B562C192F4D00D06C72 /* MentorHomeScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorHomeScreen.swift; sourceTree = "<group>"; };
+		A03B1B572C192F4D00D06C72 /* MentorMeetUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentorMeetUp.swift; sourceTree = "<group>"; };
+		A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTransportInfoView.swift; sourceTree = "<group>"; };
+		A03B1B592C192F4D00D06C72 /* StudentDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDetail.swift; sourceTree = "<group>"; };
+		A03B1B5A2C192F4D00D06C72 /* UpcomingMeetUpsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingMeetUpsListView.swift; sourceTree = "<group>"; };
+		A03B1B652C192F6900D06C72 /* CategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportAreaView.swift; sourceTree = "<group>"; };
 		E30C28BC2C0DF1B5004C9B4D /* mentorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentorData.json; sourceTree = "<group>"; };
 		E30C28C32C0DF311004C9B4D /* MentorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorRow.swift; sourceTree = "<group>"; };
@@ -84,6 +112,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A03B1B4C2C192F2E00D06C72 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B482C192F2E00D06C72 /* PublicTransportRow.swift */,
+				A03B1B492C192F2E00D06C72 /* StudentRequestRow.swift */,
+				A03B1B4A2C192F2E00D06C72 /* StudentRow.swift */,
+				A03B1B4B2C192F2E00D06C72 /* TransportAppRow.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
+		A03B1B532C192F4D00D06C72 /* Transport Views */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B512C192F4D00D06C72 /* OpalCardView.swift */,
+				A03B1B522C192F4D00D06C72 /* TransportAppsView.swift */,
+			);
+			path = "Transport Views";
+			sourceTree = "<group>";
+		};
+		A03B1B5B2C192F4D00D06C72 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B542C192F4D00D06C72 /* HousingInfoView.swift */,
+				A03B1B552C192F4D00D06C72 /* MeetUpRequestListView.swift */,
+				A03B1B562C192F4D00D06C72 /* MentorHomeScreen.swift */,
+				A03B1B572C192F4D00D06C72 /* MentorMeetUp.swift */,
+				A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */,
+				A03B1B592C192F4D00D06C72 /* StudentDetail.swift */,
+				A03B1B5A2C192F4D00D06C72 /* UpcomingMeetUpsListView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A03B1B672C192F6900D06C72 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				A03B1B652C192F6900D06C72 /* CategoryButton.swift */,
+			);
+			name = Extras;
+			path = Seasoned/Views/Extras;
+			sourceTree = SOURCE_ROOT;
+		};
 		E30C28BB2C0DF177004C9B4D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +218,11 @@
 		E3CF43CE2C0FE35D00258F42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A03B1B532C192F4D00D06C72 /* Transport Views */,
+				A03B1B672C192F6900D06C72 /* Extras */,
+				A03B1B5B2C192F4D00D06C72 /* Screens */,
 				E3CF44012C17222E00258F42 /* Messages */,
+				A03B1B4C2C192F2E00D06C72 /* Rows */,
 				E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */,
 				E37C3B532C098D7A00DEA61D /* ContentView.swift */,
 				E3CF44072C18129100258F42 /* HomeView.swift */,
@@ -265,23 +340,37 @@
 			files = (
 				E3CF43EB2C10599F00258F42 /* UserDetailsView.swift in Sources */,
 				E3CF43E92C102A2B00258F42 /* UserManager.swift in Sources */,
+				A03B1B602C192F4D00D06C72 /* MentorHomeScreen.swift in Sources */,
 				E3CF43EF2C10732100258F42 /* MainMessageView.swift in Sources */,
+				A03B1B5E2C192F4D00D06C72 /* HousingInfoView.swift in Sources */,
 				E3CF43FC2C12C69300258F42 /* RecentMessage.swift in Sources */,
 				E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */,
 				E3CF44042C17D72B00258F42 /* ChatLogViewModel.swift in Sources */,
+				A03B1B632C192F4D00D06C72 /* StudentDetail.swift in Sources */,
+				A03B1B4F2C192F2E00D06C72 /* StudentRow.swift in Sources */,
 				E3CF43D02C0FE37200258F42 /* LoginView.swift in Sources */,
+				A03B1B622C192F4D00D06C72 /* PublicTransportInfoView.swift in Sources */,
 				E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */,
+				A03B1B682C192F6900D06C72 /* CategoryButton.swift in Sources */,
 				E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */,
 				E3CF43F12C10817E00258F42 /* MainView.swift in Sources */,
+				A03B1B4E2C192F2E00D06C72 /* StudentRequestRow.swift in Sources */,
 				E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */,
+				A03B1B4D2C192F2E00D06C72 /* PublicTransportRow.swift in Sources */,
+				A03B1B5D2C192F4D00D06C72 /* TransportAppsView.swift in Sources */,
+				A03B1B502C192F2E00D06C72 /* TransportAppRow.swift in Sources */,
 				E3CF43F52C11454400258F42 /* CreateNewMessageView.swift in Sources */,
+				A03B1B5F2C192F4D00D06C72 /* MeetUpRequestListView.swift in Sources */,
 				E3CF43F72C11557700258F42 /* ChatLogView.swift in Sources */,
 				E3CF44082C18129100258F42 /* HomeView.swift in Sources */,
+				A03B1B5C2C192F4D00D06C72 /* OpalCardView.swift in Sources */,
 				E3CF43E52C101D9900258F42 /* User.swift in Sources */,
+				A03B1B612C192F4D00D06C72 /* MentorMeetUp.swift in Sources */,
 				E3CF43DB2C0FEC2D00258F42 /* ImagePicker.swift in Sources */,
 				E3CF43FA2C11772600258F42 /* FirebaseConstants.swift in Sources */,
 				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
 				E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */,
+				A03B1B642C192F4D00D06C72 /* UpcomingMeetUpsListView.swift in Sources */,
 				E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
