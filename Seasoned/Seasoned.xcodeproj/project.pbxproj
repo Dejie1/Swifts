@@ -11,19 +11,6 @@
 		E30C28BD2C0DF1B5004C9B4D /* mentorData.json in Resources */ = {isa = PBXBuildFile; fileRef = E30C28BC2C0DF1B5004C9B4D /* mentorData.json */; };
 		E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C32C0DF311004C9B4D /* MentorRow.swift */; };
 		E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C52C0DFB57004C9B4D /* MentorList.swift */; };
-		A03B1B282C19224900D06C72 /* MentorMeetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B272C19224900D06C72 /* MentorMeetUp.swift */; };
-		A03B1B2A2C19227C00D06C72 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B292C19227C00D06C72 /* CategoryButton.swift */; };
-		A03B1B2F2C19234200D06C72 /* PublicTransportRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B2E2C19234200D06C72 /* PublicTransportRow.swift */; };
-		A03B1B312C19238A00D06C72 /* StudentRequestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B302C19238A00D06C72 /* StudentRequestRow.swift */; };
-		A03B1B332C1923A900D06C72 /* StudentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B322C1923A900D06C72 /* StudentRow.swift */; };
-		A03B1B352C1923C900D06C72 /* TransportAppRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B342C1923C900D06C72 /* TransportAppRow.swift */; };
-		A03B1B372C19242200D06C72 /* MeetUpRequestListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B362C19242200D06C72 /* MeetUpRequestListView.swift */; };
-		A03B1B392C19244600D06C72 /* MentorHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B382C19244600D06C72 /* MentorHomeScreen.swift */; };
-		A03B1B3B2C19248B00D06C72 /* UpcomingMeetUpsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B3A2C19248B00D06C72 /* UpcomingMeetUpsListView.swift */; };
-		A03B1B3D2C1924DC00D06C72 /* PublicTransportInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B3C2C1924DC00D06C72 /* PublicTransportInfoView.swift */; };
-		A03B1B3F2C19250700D06C72 /* StudentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B3E2C19250700D06C72 /* StudentDetail.swift */; };
-		A03B1B412C19261D00D06C72 /* OpalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B402C19261D00D06C72 /* OpalCardView.swift */; };
-		A03B1B432C1926A900D06C72 /* TransportAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03B1B422C1926A900D06C72 /* TransportAppsView.swift */; };
 		E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */; };
 		E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B532C098D7A00DEA61D /* ContentView.swift */; };
 		E37C3B562C098D7B00DEA61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C3B552C098D7B00DEA61D /* Assets.xcassets */; };
@@ -57,19 +44,6 @@
 		E30C28BC2C0DF1B5004C9B4D /* mentorData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mentorData.json; sourceTree = "<group>"; };
 		E30C28C32C0DF311004C9B4D /* MentorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorRow.swift; sourceTree = "<group>"; };
 		E30C28C52C0DFB57004C9B4D /* MentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorList.swift; sourceTree = "<group>"; };
-		A03B1B272C19224900D06C72 /* MentorMeetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorMeetUp.swift; sourceTree = "<group>"; };
-		A03B1B292C19227C00D06C72 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
-		A03B1B2E2C19234200D06C72 /* PublicTransportRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicTransportRow.swift; sourceTree = "<group>"; };
-		A03B1B302C19238A00D06C72 /* StudentRequestRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRequestRow.swift; sourceTree = "<group>"; };
-		A03B1B322C1923A900D06C72 /* StudentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRow.swift; sourceTree = "<group>"; };
-		A03B1B342C1923C900D06C72 /* TransportAppRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportAppRow.swift; sourceTree = "<group>"; };
-		A03B1B362C19242200D06C72 /* MeetUpRequestListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetUpRequestListView.swift; sourceTree = "<group>"; };
-		A03B1B382C19244600D06C72 /* MentorHomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorHomeScreen.swift; sourceTree = "<group>"; };
-		A03B1B3A2C19248B00D06C72 /* UpcomingMeetUpsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMeetUpsListView.swift; sourceTree = "<group>"; };
-		A03B1B3C2C1924DC00D06C72 /* PublicTransportInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicTransportInfoView.swift; sourceTree = "<group>"; };
-		A03B1B3E2C19250700D06C72 /* StudentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetail.swift; sourceTree = "<group>"; };
-		A03B1B402C19261D00D06C72 /* OpalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpalCardView.swift; sourceTree = "<group>"; };
-		A03B1B422C1926A900D06C72 /* TransportAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportAppsView.swift; sourceTree = "<group>"; };
 		E37C3B4E2C098D7A00DEA61D /* Seasoned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seasoned.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonedApp.swift; sourceTree = "<group>"; };
 		E37C3B532C098D7A00DEA61D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,38 +104,6 @@
 				E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */,
 			);
 			path = Model;
-		A03B1B2B2C1922C100D06C72 /* Views2 */ = {
-			isa = PBXGroup;
-			children = (
-				A03B1B272C19224900D06C72 /* MentorMeetUp.swift */,
-				A03B1B362C19242200D06C72 /* MeetUpRequestListView.swift */,
-				A03B1B382C19244600D06C72 /* MentorHomeScreen.swift */,
-				A03B1B3A2C19248B00D06C72 /* UpcomingMeetUpsListView.swift */,
-				A03B1B3C2C1924DC00D06C72 /* PublicTransportInfoView.swift */,
-				A03B1B3E2C19250700D06C72 /* StudentDetail.swift */,
-				A03B1B402C19261D00D06C72 /* OpalCardView.swift */,
-				A03B1B422C1926A900D06C72 /* TransportAppsView.swift */,
-			);
-			path = Views2;
-			sourceTree = "<group>";
-		};
-		A03B1B2C2C1922F400D06C72 /* Buttons2 */ = {
-			isa = PBXGroup;
-			children = (
-				A03B1B292C19227C00D06C72 /* CategoryButton.swift */,
-			);
-			path = Buttons2;
-			sourceTree = "<group>";
-		};
-		A03B1B2D2C19233100D06C72 /* Rows2 */ = {
-			isa = PBXGroup;
-			children = (
-				A03B1B2E2C19234200D06C72 /* PublicTransportRow.swift */,
-				A03B1B302C19238A00D06C72 /* StudentRequestRow.swift */,
-				A03B1B342C1923C900D06C72 /* TransportAppRow.swift */,
-				A03B1B322C1923A900D06C72 /* StudentRow.swift */,
-			);
-			path = Rows2;
 			sourceTree = "<group>";
 		};
 		E37C3B452C098D7A00DEA61D = {
@@ -186,11 +128,6 @@
 			children = (
 				E3CF43CC2C0FDE5700258F42 /* GoogleService-Info.plist */,
 				E3CF43CE2C0FE35D00258F42 /* Views */,
-				E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */,
-				E37C3B532C098D7A00DEA61D /* ContentView.swift */,
-				A03B1B2C2C1922F400D06C72 /* Buttons2 */,
-				A03B1B2B2C1922C100D06C72 /* Views2 */,
-				A03B1B2D2C19233100D06C72 /* Rows2 */,
 				E37C3B552C098D7B00DEA61D /* Assets.xcassets */,
 				E30C28BE2C0DF22E004C9B4D /* Model */,
 				E30C28BB2C0DF177004C9B4D /* Resources */,
@@ -346,21 +283,6 @@
 				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
 				E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */,
 				E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */,
-				A03B1B2F2C19234200D06C72 /* PublicTransportRow.swift in Sources */,
-				A03B1B3F2C19250700D06C72 /* StudentDetail.swift in Sources */,
-				A03B1B372C19242200D06C72 /* MeetUpRequestListView.swift in Sources */,
-				A03B1B282C19224900D06C72 /* MentorMeetUp.swift in Sources */,
-				A03B1B412C19261D00D06C72 /* OpalCardView.swift in Sources */,
-				A03B1B392C19244600D06C72 /* MentorHomeScreen.swift in Sources */,
-				A03B1B432C1926A900D06C72 /* TransportAppsView.swift in Sources */,
-				A03B1B312C19238A00D06C72 /* StudentRequestRow.swift in Sources */,
-				A03B1B2A2C19227C00D06C72 /* CategoryButton.swift in Sources */,
-				A03B1B332C1923A900D06C72 /* StudentRow.swift in Sources */,
-				E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */,
-				A03B1B352C1923C900D06C72 /* TransportAppRow.swift in Sources */,
-				A03B1B3B2C19248B00D06C72 /* UpcomingMeetUpsListView.swift in Sources */,
-				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
-				A03B1B3D2C1924DC00D06C72 /* PublicTransportInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
