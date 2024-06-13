@@ -13,19 +13,21 @@ import FirebaseFirestoreSwift
 struct MainMessageView: View {
     
     @State var shouldShowLogOutOptions = false
-    @State var shouldShowNewMessageScreen = false
-    @EnvironmentObject var userViewModel: UserViewModel
-    @State var shouldNavigateToChatLogView = false
-    @State var user: User?
-    
-    
-    private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
-    var body: some View {
+        @State var shouldShowNewMessageScreen = false
+        @EnvironmentObject var userViewModel: UserViewModel
+        @State var shouldNavigateToChatLogView = false
+        @State var user: User?
+        
+        private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
+        
+        var body: some View {
             NavigationStack {
                 GeometryReader { geometry in
                     VStack {
                         customNavBar
                         messagesView
+//                        NavigationLink(destination:ChatLogView(vm: chatLogViewModel), isActive: $shouldNavigateToChatLogView) {
+//                        }
                     }
                     .overlay(
                         newMessageButton
@@ -36,15 +38,22 @@ struct MainMessageView: View {
                     .navigationBarHidden(true)
                     .navigationDestination(isPresented: $shouldNavigateToChatLogView) {
                         ChatLogView(vm: chatLogViewModel)
-                            .environmentObject(UserViewModel())
+                            .environmentObject(userViewModel)
                     }
+                    .navigationDestination(isPresented: $userViewModel.isUserCurrentlyLoggedOut) {
+                        LoginView(didCompleteLoginProcess: {
+                            self.userViewModel.isUserCurrentlyLoggedOut = false
+                            self.userViewModel.fetchCurrentUser()
+                            self.userViewModel.fetchRecentMessages()
+                        })
+                    }
+                    .navigationBarBackButtonHidden(true)
                 }
             }
         }
-    
-    
+        
     private var customNavBar: some View {
-        VStack{
+        VStack {
             HStack(spacing: 16) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Inbox")
@@ -70,16 +79,8 @@ struct MainMessageView: View {
                     .cancel()
                 ])
             }
-            .fullScreenCover(isPresented: $userViewModel.isUserCurrentlyLoggedOut, onDismiss: nil, content: {
-                LoginView(didCompleteLoginProcess: {
-                    self.userViewModel.isUserCurrentlyLoggedOut = false
-                    self.userViewModel.fetchCurrentUser()
-                    self.userViewModel.fetchRecentMessages()
-                })
-            })
             Divider()
                 .overlay(Color.black)
-//                .padding(.bottom,15)
         }
     }
     
@@ -177,7 +178,7 @@ struct MainMessageView: View {
                 self.chatLogViewModel.chatUser = user
                 self.chatLogViewModel.fetchMessages()
             })
-                .environmentObject(UserViewModel())
+                .environmentObject(userViewModel)
         }
     }
 }

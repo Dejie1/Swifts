@@ -19,30 +19,45 @@ struct ChatLogView: View {
     
     @ObservedObject var vm: ChatLogViewModel
     @State private var shouldPresentMentorMeetUp = false
+    @State private var shouldgoBackMessages = true
+    @State private var selectedTab: Int = 1
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 messagesView
                 Text(vm.errorMessage)
             }
+            .navigationBarBackButtonHidden(true)
             .onDisappear(){
                 vm.firestoreListener?.remove()
             }
+            
             .navigationTitle(vm.chatUser?.name ?? "")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        shouldPresentMentorMeetUp = true
-                    }) {
+                    NavigationLink(destination: MentorMeetUp()) {
                         Image(systemName: "person.line.dotted.person.fill")
                             .foregroundColor(.blue)
+                            .frame(width: 44, height: 44)  // Increase the touch area
+                            .background(Color.clear)  // Make sure the background is clear
+                            .contentShape(Rectangle())  // Ensure the entire frame is tappable
+                    }
+                }    
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: ContentView(selectedTab: $selectedTab).environmentObject(UserViewModel())) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.blue)
+                            .frame(width: 44, height: 44)  // Increase the touch area
+                            .background(Color.clear)  // Make sure the background is clear
+                            .contentShape(Rectangle())  // Ensure the entire frame is tappable
                     }
                 }
             }
-            .fullScreenCover(isPresented: $shouldPresentMentorMeetUp) {
-                MentorMeetUp(isPresented: $shouldPresentMentorMeetUp)
-            }
+            
         }
     }
     

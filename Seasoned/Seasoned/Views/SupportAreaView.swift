@@ -12,12 +12,13 @@ struct SupportAreaView: View {
     @State private var selectedCategories: Set<String> = []
     @State private var navigateToHome = false
     @State private var navigateToMentors = false
+    @State private var selectedTab: Int = 0
     
     var body: some View {
         NavigationStack {
             VStack {
                 
-                Spacer().frame(height: 50)
+                Spacer().frame(height: 20)
                 Group {
                     Text("Hi, \(userViewModel.displayName)!")
                         .font(.title)
@@ -30,7 +31,7 @@ struct SupportAreaView: View {
                 .padding(.leading, 20)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .navigationBarBackButtonHidden(true)
-                Spacer().frame(height: 45)
+                Spacer().frame(height: 35)
                 
                 VStack(spacing: 25) {
                     HStack(spacing: 40) {
@@ -70,7 +71,7 @@ struct SupportAreaView: View {
                 .padding()
             }
             .navigationDestination(isPresented: $navigateToHome) {
-                ContentView()
+                ContentView(selectedTab: $selectedTab)
             }
 //            .navigationDestination(isPresented: $navigateToMentors) {
 //                MentorList(selectedCategories: Array(selectedCategories))

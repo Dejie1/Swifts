@@ -19,7 +19,7 @@ struct UserDetailsView: View {
     @State private var isUploading = false
     @State private var isUploadSuccessful = false
     @State private var showSupportPage = false
-    
+    @State private var selectedTab: Int = 0
     let ageRange = Array(18...100)
     let uniRange = ["RMIT","UTS","USYD","UNSW","ACU"]
     
@@ -94,12 +94,12 @@ struct UserDetailsView: View {
         }
         .navigationDestination(isPresented: $showSupportPage){
             if viewModel.user?.userType == "Student" {
-                ContentView()
-                    .environmentObject(UserViewModel())
+                ContentView(selectedTab: $selectedTab)
+                    .environmentObject(viewModel)
                     .navigationBarBackButtonHidden(true)
             } else if viewModel.user?.userType == "Mentor" {
                 SupportAreaView()
-                    .environmentObject(UserViewModel())
+                    .environmentObject(viewModel)
                     .navigationBarBackButtonHidden(true)
                 
             }

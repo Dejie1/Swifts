@@ -15,7 +15,8 @@ struct GuideView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.leading)
-                    .padding()
+                    .padding(.bottom, 18)
+                    .padding(.top, 20)
                 
                 Divider()
                     .overlay(Color.black)
@@ -24,23 +25,13 @@ struct GuideView: View {
                 ScrollView {
                     VStack(spacing: 20) {
                         NavigationLink(destination: PublicTransportInfoView()) {
-                                                    GuideCategoryView(categoryName: "Transport", imageName: "Train")
-                                                }
-                        NavigationLink(destination: HousingView()) {
-                                                    GuideCategoryView(categoryName: "Housing", imageName: "Housing")
-                                                }
-                        NavigationLink(destination: FinanceView()) {
-                                                    GuideCategoryView(categoryName: "Finance", imageName: "Finance")
-                                                }
-                        NavigationLink(destination: HealthView()) {
-                                                    GuideCategoryView(categoryName: "Health", imageName: "Health")
-                                                }
-                        NavigationLink(destination: EducationView()) {
-                                                    GuideCategoryView(categoryName: "Education", imageName: "Education")
-                                                }
-                        NavigationLink(destination: EventView()) {
-                                                    GuideCategoryView(categoryName: "Events", imageName: "Event")
-                                                }
+                            GuideCategoryView(categoryName: "Transport", imageName: "Train")
+                        }
+                        GuideCategoryView(categoryName: "Housing", imageName: "Housing", isAvailable: false)
+                        GuideCategoryView(categoryName: "Finance", imageName: "Finance", isAvailable: false)
+                        GuideCategoryView(categoryName: "Health", imageName: "Health", isAvailable: false)
+                        GuideCategoryView(categoryName: "Education", imageName: "Education", isAvailable: false)
+                        GuideCategoryView(categoryName: "Events", imageName: "Event", isAvailable: false)
                     }
                     .padding(.horizontal)
                 }
@@ -54,6 +45,7 @@ struct GuideView: View {
 struct GuideCategoryView: View {
     var categoryName: String
     var imageName: String
+    var isAvailable: Bool = true
     
     var body: some View {
         ZStack {
@@ -63,26 +55,42 @@ struct GuideCategoryView: View {
                 .frame(height: 150)
                 .clipped()
                 .cornerRadius(23)
+                .grayscale(isAvailable ? 0 : 1)
             
-            HStack {
-                Spacer()
-                Text(categoryName)
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding()
-                    .foregroundColor(.black)
-                
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.black)
-                    .padding(.trailing)
+            if isAvailable {
+                HStack {
+                    Spacer()
+                    Text(categoryName)
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding()
+                        .foregroundColor(.black)
+                    
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.black)
+                        .padding(.trailing)
+                }
+                .frame(height: 150)
+                .background(Color.white.opacity(0.4))
+                .cornerRadius(10)
+            } else {
+                VStack {
+                    Spacer()
+                    Text("Coming soon")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .padding()
+                    Spacer()
+                }
+                .frame(height: 150)
+                .background(Color.black.opacity(0.6))
+                .cornerRadius(10)
             }
-            .frame(height: 150)
-            .background(Color.white.opacity(0.4))
-            .cornerRadius(10)
         }
-//        .shadow(radius: 5)
         .overlay(RoundedRectangle(cornerRadius: 25.0)
-            .stroke(Color.gray,lineWidth: 1))
+            .stroke(Color.gray, lineWidth: 1))
+        .disabled(!isAvailable)
     }
 }
 

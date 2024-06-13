@@ -19,10 +19,12 @@ struct LoginView: View {
     @State var shouldShowImagePicker = false
     @State var loginStatusMessage = ""
     
-    @StateObject private var viewModel = UserViewModel()
+    @EnvironmentObject private var viewModel: UserViewModel
     @State private var showUserDetailsPage = false
     @State private var showSupportAreaPage = false
     @State private var showContentPage = false
+    @State private var selectedTab: Int = 0
+    @State var image: UIImage?
     
     var body: some View {
         NavigationStack {
@@ -35,6 +37,7 @@ struct LoginView: View {
                         Text("Create Account")
                             .tag(false)
                     }.pickerStyle(SegmentedPickerStyle())
+                        .navigationBarBackButtonHidden(true)
                         
                     if !isLoginMode {
                         Button {
@@ -102,18 +105,18 @@ struct LoginView: View {
                 }
                 // NavigationLink to different pages
                 .navigationDestination(isPresented: $showContentPage){
-                    ContentView()
-                        .environmentObject(UserViewModel())
+                    ContentView(selectedTab: $selectedTab)
+                        .environmentObject(viewModel)
                         .navigationBarBackButtonHidden(true)
                 }
                 .navigationDestination(isPresented: $showSupportAreaPage){
                     SupportAreaView()
-                        .environmentObject(UserViewModel())
+                        .environmentObject(viewModel)
                         .navigationBarBackButtonHidden(true)
                 }
                 .navigationDestination(isPresented: $showUserDetailsPage){
                     UserDetailsView()
-                        .environmentObject(UserViewModel())
+                        .environmentObject(viewModel)
                         .navigationBarBackButtonHidden(true)
                 }
                 .padding()
@@ -129,15 +132,6 @@ struct LoginView: View {
         }
     }
     
-    @State var image: UIImage?
-    
-    private func handleAction() {
-        if isLoginMode {
-            loginUser()
-        } else {
-            createNewAccount()
-        }
-    }
     
     private func loginUser() {
         FirebaseManager.shared.auth.signIn(withEmail: email, password: password) { result, err in
@@ -167,6 +161,14 @@ struct LoginView: View {
                     self.loginStatusMessage = "Failed to fetch user after login: \(error)"
                 }
             }
+        }
+    }
+    
+    private func handleAction() {
+        if isLoginMode {
+            loginUser()
+        } else {
+            createNewAccount()
         }
     }
     

@@ -33,7 +33,7 @@ struct CategoryButton: View {
                 Image(systemName: iconName)
                     .font(.system(size: 15))
                     .foregroundColor(color)
-                    .padding(.bottom, 5)
+//                    .padding(.bottom, 1)
                 
                 Text(label)
                     .font(.caption)
@@ -46,7 +46,7 @@ struct CategoryButton: View {
             //        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.black, lineWidth: 1)
+                    .stroke(Color.black, lineWidth: 0.7)
             )
             .shadow(radius: 5)
         }

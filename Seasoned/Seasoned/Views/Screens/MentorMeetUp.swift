@@ -12,33 +12,9 @@ struct MentorMeetUp: View {
     @State private var meetUpDate = Date()
     @State private var selectedCategories: Set<String> = []
     @State private var showAlert = false
-    @Binding var isPresented: Bool
-    
-    private func resetPage() {
-            selectedCategories.removeAll()
-            description = ""  // Reset any other state variables as needed
-            // Add any additional reset logic here
-        }
     
     var body: some View {
         VStack {
-            HStack {
-                Button(action: {
-                    isPresented = false
-                }) {
-                    Image(systemName: "chevron.backward")
-                        .font(.system(size: 15))
-                        .padding(.bottom, 5)
-                }
-                .offset(x: 30,y:3)
-                Spacer()
-                Text("Schedule a Meet Up")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding()
-                Spacer()
-            }
-//            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
                 Text("Description")
                     .font(.title3)
@@ -47,7 +23,7 @@ struct MentorMeetUp: View {
                 
                 
                 TextField("Example: Hey, can we meet up to discuss finance and health?", text: $description, axis: .vertical)
-                    .lineLimit(10, reservesSpace: true)
+                    .lineLimit(15, reservesSpace: true)
                     .padding(.horizontal)
                     .textFieldStyle(.roundedBorder)
                 
@@ -67,7 +43,6 @@ struct MentorMeetUp: View {
                 .padding(.bottom)
               
                 VStack{
-
                     VStack(spacing: 15) {
                         HStack(spacing: 20) {
                             CategoryButton(iconName: "dollarsign.circle",
@@ -123,21 +98,24 @@ struct MentorMeetUp: View {
                             title: Text("Sent"),
                             message: Text("MeetUp request has been sent."),
                             dismissButton: .default(Text("OK"), action: {
-                                isPresented = false
+//                                isPresented = false
                             })
                         )
                     }
                     .disabled(selectedCategories.isEmpty)
                     .padding()
                 }
-
-                
-                
+//                Spacer().frame(height: 100) // Add this Spacer to move the VStack up
             }
+            
         }
+//        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+        .navigationTitle("Schedule a Meet Up")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-//#Preview {
-//    MentorMeetUp(isPresented: <#T##Binding<Bool>#>)
-//}
+#Preview {
+    MentorMeetUp()
+}
+

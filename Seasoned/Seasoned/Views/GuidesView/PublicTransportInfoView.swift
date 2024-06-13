@@ -19,6 +19,16 @@ struct PublicTransportInfoView: View {
                     
                     Divider()
                     
+                    NavigationLink(
+                        destination: OpalCardView()) {
+                            PublicTransportRow(image: "opallogo",
+                                               title: "Opal Cards",
+                                               description: "Opal is your key to get around, here's what you need to know")}
+                        .foregroundStyle(.black)
+                        .padding()
+                    
+                    Divider()
+                    
                     Link(destination: URL(string: "https://transportnsw.info/routes/train")!) {
                             PublicTransportRow(image: "sydneytrains",
                                                title: "Sydney Trains",
@@ -58,16 +68,6 @@ struct PublicTransportInfoView: View {
                             PublicTransportRow(image: "sydneyferries",
                                                title: "Sydney Ferries",
                                                description: "The ferry network of Sydney Harbour and Parramatta River")}
-                        .foregroundStyle(.black)
-                        .padding()
-                    
-                    Divider()
-                    
-                    NavigationLink(
-                        destination: OpalCardView()) {
-                            PublicTransportRow(image: "opallogo",
-                                               title: "Opal Cards",
-                                               description: "Opal is your key to get around, here's what you need to know")}
                         .foregroundStyle(.black)
                         .padding()
                     

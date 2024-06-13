@@ -6,29 +6,29 @@
 //
 
 import SwiftUI
-
-struct MainView: View {
-    @EnvironmentObject var userViewModel: UserViewModel
-    
-    var body: some View {
-        NavigationStack {
-            if userViewModel.isUserCurrentlyLoggedOut {
-                LoginView(didCompleteLoginProcess: handleLoginCompletion)
-            } else if userViewModel.user?.name == nil {
-                UserDetailsView()
-            } else if userViewModel.user?.userType == "Mentor" && !(userViewModel.user?.hasSelectedCategories ?? false) {
-                SupportAreaView()
-            } else {
-                ContentView()
-            }
-        }
-        .onAppear {
-            userViewModel.fetchCurrentUser()
-        }
-    }
-    
-    private func handleLoginCompletion() {
-        userViewModel.fetchCurrentUser()
-    }
-}
+//
+//struct MainView: View {
+//    @EnvironmentObject var userViewModel: UserViewModel
+//    
+//    var body: some View {
+//        NavigationStack {
+//            if userViewModel.isUserCurrentlyLoggedOut {
+//                LoginView(didCompleteLoginProcess: handleLoginCompletion)
+//            } else if userViewModel.user?.name == nil {
+//                UserDetailsView()
+//            } else if userViewModel.user?.userType == "Mentor" && !(userViewModel.user?.hasSelectedCategories ?? false) {
+//                SupportAreaView()
+//            } else {
+//                ContentView()
+//            }
+//        }
+//        .onAppear {
+//            userViewModel.fetchCurrentUser()
+//        }
+//    }
+//    
+//    private func handleLoginCompletion() {
+//        userViewModel.fetchCurrentUser()
+//    }
+//}
 

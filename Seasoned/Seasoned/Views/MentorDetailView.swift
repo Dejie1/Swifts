@@ -14,10 +14,10 @@ struct MentorDetailView: View {
     let categoryStyles: [String: (color: Color, symbol: String)] = [
         "Finance": (color: Color.green, symbol: "dollarsign.circle"),
         "Housing": (color: Color.blue, symbol: "house"),
-        "Transport": (color: Color.red, symbol: "car"),
-        "Education": (color: Color.orange, symbol: "book"),
-        "Event": (color: Color.purple, symbol: "calendar"),
-        "Health": (color: Color.teal, symbol: "heart")
+        "Transport": (color: Color.red, symbol: "tram.fill"),
+        "Education": (color: Color.orange, symbol: "graduationcap.fill"),
+        "Event": (color: Color.purple, symbol: "person.3.fill"),
+        "Health": (color: Color.teal, symbol: "cross.circle.fill")
     ]
 
     var body: some View {
