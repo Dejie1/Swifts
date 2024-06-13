@@ -68,13 +68,13 @@ struct UpcomingMeetUpsSection: View {
             
             VStack {
                 StudentRow2(imageName: "MichaelBrown",
-                           studentName: "  Michael",
+                           studentName: "  Michael Brown",
                            meetUpTime: "  10am Tuesday 26 June")
                 
                 Divider()
                 
                 StudentRow2(imageName: "JohnDoe",
-                           studentName: "  John",
+                           studentName: "  John Doe",
                            meetUpTime: "  2pm Wednesday 27 June")
             }
 //            .padding(.bottom, 5)
@@ -116,14 +116,14 @@ struct MeetUpRequestsSection: View {
             
             VStack {
                 StudentRequestRow2(imageName: "EmilyWhite",
-                                  studentName: "  Emily",
-                                  requestMessage: "  Hi, I would like to MeetUp ")
+                                  studentName: "  Emily White",
+                                  requestMessage: "  Can you show me around Sydney?")
                 
                 Divider()
                 
                 StudentRequestRow2(imageName: "DavidGreen",
-                                  studentName: "  David",
-                                  requestMessage: "  Hi, I would like to MeetUp")
+                                  studentName: "  David Green",
+                                  requestMessage: "  Hi, can we meet for a while?")
             }
 //            .padding(.bottom, 10)
             

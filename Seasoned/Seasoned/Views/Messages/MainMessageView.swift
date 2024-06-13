@@ -32,7 +32,7 @@ struct MainMessageView: View {
                     .overlay(
                         newMessageButton
                             .padding()
-                            .position(x: geometry.size.width - 65, y: geometry.size.height - 40),
+                            .position(x: geometry.size.width - 65, y: geometry.size.height - 60),
                         alignment: .bottomTrailing
                     )
                     .navigationBarHidden(true)

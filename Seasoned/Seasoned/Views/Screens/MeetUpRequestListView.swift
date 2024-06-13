@@ -17,15 +17,13 @@ struct MeetUpRequest: Identifiable {
 
 struct MeetUpRequestListView: View {
     let meetUpRequests: [MeetUpRequest] = [
-        MeetUpRequest(image: "JohnDoe", name: "Michael", requestMessage: "Can we discuss project management strategies?", requestedTime: "June 15, 2024 at 10:00 AM"),
-        MeetUpRequest(image: "JohnDoe", name: "Sarah", requestMessage: "I'd like to go over financial planning.", requestedTime: "June 16, 2024 at 2:00 PM"),
-        MeetUpRequest(image: "JohnDoe", name: "John", requestMessage: "Can we talk about mental health?", requestedTime: "June 17, 2024 at 4:00 PM"),
-        MeetUpRequest(image: "JohnDoe", name: "David", requestMessage: "I'd like your advice on digital marketing.", requestedTime: "June 18, 2024 at 11:00 AM"),
-        MeetUpRequest(image: "JohnDoe", name: "Anna", requestMessage: "Can we discuss effective communication?", requestedTime: "June 19, 2024 at 3:00 PM"),
-        MeetUpRequest(image: "JohnDoe", name: "Tom", requestMessage: "I'd like to learn about AI in business.", requestedTime: "June 20, 2024 at 10:00 AM"),
-        MeetUpRequest(image: "JohnDoe", name: "Lucy", requestMessage: "Can you teach me the basics of graphic design?", requestedTime: "June 21, 2024 at 1:00 PM"),
-        MeetUpRequest(image: "JohnDoe", name: "Peter", requestMessage: "Can we go over advanced data analysis techniques?", requestedTime: "June 22, 2024 at 4:00 PM"),
-        MeetUpRequest(image: "JohnDoe", name: "Emily", requestMessage: "I'd like to learn about blockchain technology.", requestedTime: "June 23, 2024 at 10:00 AM")
+        MeetUpRequest(image: "EmilyWhite", name: "Emily White", requestMessage: "Can you show me around Sydney?", requestedTime: "July 15, 2024 at 10:00 AM"),
+        MeetUpRequest(image: "DavidGreen", name: "David Green", requestMessage: "Hi, can we meet for a while?", requestedTime: "July 16, 2024 at 2:00 PM"),
+        MeetUpRequest(image: "JohnDoe", name: "John Doe", requestMessage: "Can we talk about health care in Sydney?", requestedTime: "July 17, 2024 at 4:00 PM"),
+        MeetUpRequest(image: "JaneSmith", name: "Jane Smith", requestMessage: "I'd like your advice on the housing matter.", requestedTime: "July 18, 2024 at 11:00 AM"),
+        MeetUpRequest(image: "JessicaWilliams", name: "Jessica Williams", requestMessage: "Can we discuss the ways of finding events?", requestedTime: "July 19, 2024 at 3:00 PM"),
+        MeetUpRequest(image: "MichaelBrown", name: "Michael Brown", requestMessage: "I'd like to learn about how transport works in Sydney.", requestedTime: "July 20, 2024 at 10:00 AM"),
+        MeetUpRequest(image: "SarahJohnson", name: "Sarah Johnson", requestMessage: "Can you teach me the things to look for in finding housing?", requestedTime: "July 21, 2024 at 1:00 PM")
     ]
     
     var body: some View {

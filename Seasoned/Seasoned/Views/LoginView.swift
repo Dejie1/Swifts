@@ -1,10 +1,3 @@
-//
-//  LoginView.swift
-//  Seasoned
-//
-//  Created by De Jie Ang on 5/6/2024.
-//
-
 import SwiftUI
 
 struct LoginView: View {
@@ -25,6 +18,8 @@ struct LoginView: View {
     @State private var showContentPage = false
     @State private var selectedTab: Int = 0
     @State var image: UIImage?
+    
+    @State private var isLoading = false
     
     var body: some View {
         NavigationStack {
@@ -87,22 +82,28 @@ struct LoginView: View {
                     }
                     
                     Button {
-                        handleAction()
+                                            handleAction()
                     } label: {
                         HStack {
                             Spacer()
-                            Text(isLoginMode ? "Log In" : "Create Account")
-                                .foregroundColor(.white)
-                                .padding(.vertical, 10)
-                                .font(.system(size: 14, weight: .semibold))
+                            if isLoading {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle())
+                                    .padding(.vertical, 10)
+                            } else {
+                                Text(isLoginMode ? "Log In" : "Create Account")
+                                    .foregroundColor(.white)
+                                    .padding(.vertical, 10)
+                                    .font(.system(size: 14, weight: .semibold))
+                            }
                             Spacer()
                         }
-                        .background(Color.blue)
+                        .background(isLoading ? Color.lightgray : Color.blue)
                         .cornerRadius(5.0)
                     }
-                    
-                    Text(self.loginStatusMessage)
-                        .foregroundColor(.red)
+                    .disabled(isLoading)
+//                    Text(self.loginStatusMessage)
+//                        .foregroundColor(.red)
                     
                 }
                 // NavigationLink to different pages
@@ -119,7 +120,6 @@ struct LoginView: View {
                 .navigationDestination(isPresented: $showUserDetailsPage){
                     UserDetailsView()
                         .environmentObject(viewModel)
-//                        .navigationBarBackButtonHidden(true)
                 }
                 .padding()
                 
@@ -136,7 +136,9 @@ struct LoginView: View {
     
     
     private func loginUser() {
+        isLoading = true
         FirebaseManager.shared.auth.signIn(withEmail: email, password: password) { result, err in
+            isLoading = false
             if let err = err {
                 print("Failed to login user:", err)
                 self.loginStatusMessage = "Failed to login user: \(err)"
@@ -180,8 +182,11 @@ struct LoginView: View {
             return
         }
         
+        isLoading = true
+        
         FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, err in
             if let err = err {
+                isLoading = false
                 print("Failed to create user:", err)
                 self.loginStatusMessage = "Failed to create user: \(err)"
                 return
@@ -206,6 +211,7 @@ struct LoginView: View {
         // Upload the image data to Firebase Storage
         ref.putData(imageData, metadata: nil) { metadata, err in
             if let err = err {
+                self.isLoading = false
                 self.loginStatusMessage = "Failed to push image to Storage: \(err.localizedDescription)"
                 return
             }
@@ -213,12 +219,14 @@ struct LoginView: View {
             // Retrieve the download URL for the uploaded image
             ref.downloadURL { url, err in
                 if let err = err {
+                    self.isLoading = false
                     self.loginStatusMessage = "Failed to retrieve downloadURL: \(err.localizedDescription)"
                     return
                 }
                 
                 // Ensure the URL is not nil
                 guard let downloadURL = url else {
+                    self.isLoading = false
                     self.loginStatusMessage = "Failed to retrieve downloadURL: URL is nil"
                     return
                 }
@@ -243,6 +251,7 @@ struct LoginView: View {
         ]
         FirebaseManager.shared.firestore.collection("users")
             .document(uid).setData(userData) { err in
+                self.isLoading = false
                 if let err = err {
                     print(err)
                     self.loginStatusMessage = "\(err)"
@@ -261,4 +270,3 @@ struct LoginView_Previews: PreviewProvider {
             .environmentObject(UserViewModel())
     }
 }
-
