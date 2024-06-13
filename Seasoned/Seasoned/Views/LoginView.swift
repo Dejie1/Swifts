@@ -4,7 +4,7 @@ struct LoginView: View {
     
     let didCompleteLoginProcess: () -> ()
     
-    @State private var isLoginMode = false
+    @State private var isLoginMode = true
     @State private var email = ""
     @State private var password = ""
     @State private var userType = "Student"
