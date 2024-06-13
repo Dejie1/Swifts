@@ -9,36 +9,36 @@ import SwiftUI
 
 struct GuideView: View {
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Guides")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.leading)
-                    .padding(.bottom, 18)
-                    .padding(.top, 20)
-                
+            VStack(alignment: .leading, spacing: 2) {
+                HStack{
+                    Text("Guides")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 8)
+                }
+                .padding()
                 Divider()
                     .overlay(Color.black)
                 Spacer()
-                
-                ScrollView {
-                    VStack(spacing: 20) {
-                        NavigationLink(destination: PublicTransportInfoView()) {
-                            GuideCategoryView(categoryName: "Transport", imageName: "Train")
-                        }
-                        GuideCategoryView(categoryName: "Housing", imageName: "Housing", isAvailable: false)
-                        GuideCategoryView(categoryName: "Finance", imageName: "Finance", isAvailable: false)
-                        GuideCategoryView(categoryName: "Health", imageName: "Health", isAvailable: false)
-                        GuideCategoryView(categoryName: "Education", imageName: "Education", isAvailable: false)
-                        GuideCategoryView(categoryName: "Events", imageName: "Event", isAvailable: false)
-                    }
-                    .padding(.horizontal)
-                }
-                
-                Spacer()
+                guideView
+                //                Spacer()
             }
+    }
+}
+
+private var guideView: some View{
+    ScrollView {
+        VStack(spacing: 20) {
+            NavigationLink(destination: PublicTransportInfoView()) {
+                GuideCategoryView(categoryName: "Transport", imageName: "Train")
+            }
+            GuideCategoryView(categoryName: "Housing", imageName: "Housing", isAvailable: false)
+            GuideCategoryView(categoryName: "Finance", imageName: "Finance", isAvailable: false)
+            GuideCategoryView(categoryName: "Health", imageName: "Health", isAvailable: false)
+            GuideCategoryView(categoryName: "Education", imageName: "Education", isAvailable: false)
+            GuideCategoryView(categoryName: "Events", imageName: "Event", isAvailable: false)
         }
+        .padding(.horizontal)
     }
 }
 

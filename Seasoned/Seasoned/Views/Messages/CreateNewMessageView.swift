@@ -46,6 +46,7 @@ struct CreateNewMessageView: View {
                     
                 }
             }.navigationTitle("New Message")
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
                         Button {

@@ -72,6 +72,7 @@ struct SupportAreaView: View {
             }
             .navigationDestination(isPresented: $navigateToHome) {
                 ContentView(selectedTab: $selectedTab)
+                    .navigationBarBackButtonHidden(true)
             }
 //            .navigationDestination(isPresented: $navigateToMentors) {
 //                MentorList(selectedCategories: Array(selectedCategories))
@@ -96,6 +97,7 @@ struct SupportAreaView: View {
             userViewModel.fetchCurrentUser()
         }
 //        .navigationBarBackButtonHidden(true)
+        .toolbarBackground(.lightgray, for: .tabBar)
     }
     
     private func updateMentorCategories() {

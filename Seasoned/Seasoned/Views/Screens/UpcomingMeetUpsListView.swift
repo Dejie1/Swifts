@@ -9,10 +9,11 @@ import SwiftUI
 
 struct UpcomingMeetUpsListView: View {
     var body: some View {
-        NavigationStack {
+        VStack {
             Text("Upcoming meet up view")
-                .navigationTitle("Upcoming Meet Ups")
         }
+        .navigationTitle("Upcoming Meet Ups")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

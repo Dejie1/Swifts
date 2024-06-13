@@ -9,10 +9,12 @@ import SwiftUI
 
 struct MeetUpRequestListView: View {
     var body: some View {
-        NavigationStack {
+        VStack {
             Text("MeetUp Request View")
-                .navigationTitle("MeetUp Requests")
+                
         }
+        .navigationTitle("MeetUp Requests")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

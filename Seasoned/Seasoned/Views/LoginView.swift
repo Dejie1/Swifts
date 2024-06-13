@@ -117,7 +117,7 @@ struct LoginView: View {
                 .navigationDestination(isPresented: $showUserDetailsPage){
                     UserDetailsView()
                         .environmentObject(viewModel)
-                        .navigationBarBackButtonHidden(true)
+//                        .navigationBarBackButtonHidden(true)
                 }
                 .padding()
                 

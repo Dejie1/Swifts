@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct MentorHomeScreen: View {
     
@@ -13,24 +14,39 @@ struct MentorHomeScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment:.leading, spacing: 0) {
-                Text("Welcome, \(vm.displayName)")
-                    .font(.largeTitle)
-                    .fontWeight(.medium)
-                    .padding(.leading)
-                    .padding(.bottom, 18)
-                    .padding(.top, 20)
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Text("Home")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 8)
+                    Spacer()
+                    
+                    WebImage(url: URL(string: vm.user?.profileImageUrl ?? ""))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 50, height: 50)
+                        .clipped()
+                        .cornerRadius(50)
+                        .overlay(RoundedRectangle(cornerRadius: 44)
+                                    .stroke(Color(.label), lineWidth: 1)
+                        )
+                        .shadow(radius: 5)
+                }
+                .padding()
                 
                 Divider()
                     .overlay(Color.black)
-                
-                VStack(spacing: 20) {
-                    UpcomingMeetUpsSection()
-                    MeetUpRequestsSection()
-                    Spacer()
+                ScrollView{
+                    VStack(spacing: 10) {
+                        UpcomingMeetUpsSection()
+                        Spacer()
+                        MeetUpRequestsSection()
+                        Spacer()
+                    }
+                    .padding()
+                    .background(Color.clear)
                 }
-                .padding()
-                .background(Color.clear)
             }
         }
     }
@@ -46,42 +62,39 @@ struct UpcomingMeetUpsSection: View {
                 
                 Spacer()
             }
-            .padding(.horizontal)
             
             Divider()
                 .overlay(Color.black)
             
-            
             VStack {
-                
-                StudentRow(image: "placeholder",
-                           studentName: "Student Name",
-                           meetUpTime: "10am Tuesday 26 June")
+                StudentRow2(imageName: "MichaelBrown",
+                           studentName: "  Michael",
+                           meetUpTime: "  10am Tuesday 26 June")
                 
                 Divider()
                 
-                StudentRow(image: "placeholder",
-                           studentName: "Student Name",
-                           meetUpTime: "10am Tuesday 26 June")
+                StudentRow2(imageName: "JohnDoe",
+                           studentName: "  John",
+                           meetUpTime: "  2pm Wednesday 27 June")
             }
-            .padding(.bottom, 10)
+//            .padding(.bottom, 5)
             
             Divider()
             
             HStack {
-                NavigationLink("See all Upcoming MeetUps", destination: UpcomingMeetUpsListView())
-                    .foregroundColor(.black)
+                Spacer()
+                NavigationLink("See all", destination: UpcomingMeetUpsListView())
+                    .foregroundColor(.blue)
                     .fontWeight(.semibold)
                 
-                Spacer()
             }
             .padding(.top, 10)
         }
         .padding(.horizontal)
-        .frame(width: 350, height: 240)
+        .frame(width: 350, height: 320)
         .background(Color.white.opacity(0.8))
         .cornerRadius(10)
-        .shadow(radius: 15)
+        .shadow(radius: 5)
     }
 }
 
@@ -95,41 +108,97 @@ struct MeetUpRequestsSection: View {
                 
                 Spacer()
             }
-            .padding(.horizontal)
+//            .padding(.horizontal)
+            .navigationBarBackButtonHidden(true)
             
             Divider()
                 .overlay(Color.black)
             
             VStack {
-                StudentRequestRow(image: "placeholder",
-                                  studentName: "StudentName",
-                                  requestMessage: "Hi, I would like to MeetUp ")
+                StudentRequestRow2(imageName: "EmilyWhite",
+                                  studentName: "  Emily",
+                                  requestMessage: "  Hi, I would like to MeetUp ")
                 
                 Divider()
                 
-                StudentRequestRow(image: "placeholder",
-                                  studentName: "StudentName",
-                                  requestMessage: "Hi, I would like to MeetUp")
-                
+                StudentRequestRow2(imageName: "DavidGreen",
+                                  studentName: "  David",
+                                  requestMessage: "  Hi, I would like to MeetUp")
             }
-            .padding(.bottom, 10)
+//            .padding(.bottom, 10)
             
             Divider()
             
             HStack {
-                NavigationLink("See all MeetUp Requests", destination: MeetUpRequestListView())
-                    .foregroundColor(.black)
-                    .fontWeight(.semibold)
-                
                 Spacer()
+                NavigationLink("See all", destination: MeetUpRequestListView())
+                    .foregroundColor(.blue)
+                    .fontWeight(.semibold)
             }
             .padding(.top, 10)
         }
         .padding(.horizontal)
-        .frame(width: 350, height: 240)
+        .frame(width: 350, height: 320)
         .background(Color.white.opacity(0.8))
         .cornerRadius(10)
-        .shadow(radius: 15)
+        .shadow(radius: 5)
+    }
+}
+
+struct StudentRow2: View {
+    var imageName: String
+    var studentName: String
+    var meetUpTime: String
+    
+    var body: some View {
+        HStack {
+            Image(imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 50, height: 50)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+//                .shadow(radius: 10)
+            
+            VStack(alignment: .leading) {
+                Text(studentName)
+                    .font(.headline)
+                Text(meetUpTime)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
+            Spacer()
+        }
+        .padding()
+    }
+}
+
+struct StudentRequestRow2: View {
+    var imageName: String
+    var studentName: String
+    var requestMessage: String
+    
+    var body: some View {
+        HStack {
+            Image(imageName)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 50, height: 50)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.black, lineWidth: 1))
+//                .shadow(radius: 10)
+            
+            VStack(alignment: .leading) {
+                Text(studentName)
+                    .font(.headline)
+                Text(requestMessage)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                    .lineLimit(1)
+            }
+            Spacer()
+        }
+        .padding()
     }
 }
 

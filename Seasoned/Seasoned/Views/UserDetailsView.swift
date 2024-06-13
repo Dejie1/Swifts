@@ -90,7 +90,7 @@ struct UserDetailsView: View {
                 }
             }
             .navigationBarTitle("Enter your details", displayMode: .inline)
-            .padding()
+//            .padding()
         }
         .navigationDestination(isPresented: $showSupportPage){
             if viewModel.user?.userType == "Student" {

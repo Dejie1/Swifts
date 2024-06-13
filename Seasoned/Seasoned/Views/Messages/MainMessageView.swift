@@ -93,64 +93,73 @@ struct MainMessageView: View {
     }
     
     private var messagesView: some View {
-//        Divider
         ScrollView {
-            ForEach(userViewModel.recentMessages) { recentMessage in
-                VStack {
-                    Button{
-                        let uid = FirebaseManager.shared.auth.currentUser?.uid == recentMessage.fromId ? recentMessage.toId : recentMessage.fromId
-                        
-                        self.user = User(
-                            id: uid,
-                            uid: uid,
-                            email: "placeholder@example.com",  // Placeholder email
-                            profileImageUrl: recentMessage.profileImageUrl,
-                            userType: "placeholderUserType",   // Placeholder userType
-                            selectedCategories: nil,           // Optional, can be nil
-                            hasSelectedCategories: false,      // Placeholder value
-                            name: recentMessage.name,
-                            about: nil,                        // Optional, can be nil
-                            age: nil,                          // Optional, can be nil
-                            uni: nil,                          // Optional, can be nil
-                            course: nil                        // Optional, can be nil
-                        )
-                        
-                        self.chatLogViewModel.chatUser = self.user
-                        self.chatLogViewModel.fetchMessages()
-                        self.shouldNavigateToChatLogView.toggle()
-                    } label: {
-                        HStack(spacing: 16) {
-                            WebImage(url: URL(string: recentMessage.profileImageUrl))
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width:64, height:64)
-                                .overlay(RoundedRectangle(cornerRadius: 64)
-                                            .stroke(Color.black, lineWidth: 2))
-                                .clipShape(Circle())
-                            VStack(alignment: .leading) {
-                                Text(recentMessage.name)
-                                    .font(.system(size: 16, weight: .bold))
-                                    .foregroundStyle(Color(.label))
-                                    .padding(.bottom,1)
-                                Text(messageText(recentMessage: recentMessage))
-                                    .font(.system(size: 14))
-                                    .foregroundColor(Color(.darkGray))
+            VStack {
+                if userViewModel.recentMessages.isEmpty {
+                    Spacer()
+                    Text("Click on the + Button and Chat!")
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundColor(Color(.gray))
+                    Spacer()
+                } else {
+                    ForEach(userViewModel.recentMessages) { recentMessage in
+                        VStack {
+                            Button {
+                                let uid = FirebaseManager.shared.auth.currentUser?.uid == recentMessage.fromId ? recentMessage.toId : recentMessage.fromId
                                 
+                                self.user = User(
+                                    id: uid,
+                                    uid: uid,
+                                    email: "placeholder@example.com",  // Placeholder email
+                                    profileImageUrl: recentMessage.profileImageUrl,
+                                    userType: "placeholderUserType",   // Placeholder userType
+                                    selectedCategories: nil,           // Optional, can be nil
+                                    hasSelectedCategories: false,      // Placeholder value
+                                    name: recentMessage.name,
+                                    about: nil,                        // Optional, can be nil
+                                    age: nil,                          // Optional, can be nil
+                                    uni: nil,                          // Optional, can be nil
+                                    course: nil                        // Optional, can be nil
+                                )
+                                
+                                self.chatLogViewModel.chatUser = self.user
+                                self.chatLogViewModel.fetchMessages()
+                                self.shouldNavigateToChatLogView.toggle()
+                            } label: {
+                                HStack(spacing: 16) {
+                                    WebImage(url: URL(string: recentMessage.profileImageUrl))
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 64, height: 64)
+                                        .overlay(RoundedRectangle(cornerRadius: 64)
+                                                    .stroke(Color.black, lineWidth: 2))
+                                        .clipShape(Circle())
+                                    VStack(alignment: .leading) {
+                                        Text(recentMessage.name)
+                                            .font(.system(size: 16, weight: .bold))
+                                            .foregroundStyle(Color(.label))
+                                            .padding(.bottom, 1)
+                                        Text(messageText(recentMessage: recentMessage))
+                                            .font(.system(size: 14))
+                                            .foregroundColor(Color(.darkGray))
+                                    }
+                                    Spacer()
+                                    
+                                    Text(recentMessage.timeAgo)
+                                        .font(.system(size: 14, weight: .semibold))
+                                }
                             }
-                            Spacer()
-                            
-                            Text(recentMessage.timeAgo)
-                                .font(.system(size: 14, weight: .semibold))
+                            Divider()
+                                .padding(.vertical, 8)
                         }
+                        .padding(.horizontal)
                     }
-                    Divider()
-                        .padding(.vertical, 8)
-                }.padding(.horizontal)
-                
-            }.padding(.bottom, 50)
+                }
+            }
+            .padding(.bottom, 50)
         }
     }
-    
+
     private var newMessageButton: some View {
         Button {
             shouldShowNewMessageScreen.toggle()
