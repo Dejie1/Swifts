@@ -26,6 +26,13 @@
 		E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C32C0DF311004C9B4D /* MentorRow.swift */; };
 		E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C28C52C0DFB57004C9B4D /* MentorList.swift */; };
 		E310D0012C19AA540035977E /* MentorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E310D0002C19AA540035977E /* MentorDetailView.swift */; };
+		E350FAD42C1A760300FE5769 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350FAD32C1A760300FE5769 /* GuideView.swift */; };
+		E350FAD62C1A77F900FE5769 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350FAD52C1A77F900FE5769 /* ThemeColor.swift */; };
+		E350FAD92C1A816C00FE5769 /* FinanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350FAD82C1A816C00FE5769 /* FinanceView.swift */; };
+		E350FADB2C1A818100FE5769 /* HousingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350FADA2C1A818100FE5769 /* HousingView.swift */; };
+		E350FADD2C1A818C00FE5769 /* EducationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350FADC2C1A818C00FE5769 /* EducationView.swift */; };
+		E350FADF2C1A81CD00FE5769 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350FADE2C1A81CD00FE5769 /* EventView.swift */; };
+		E350FAE12C1A81EB00FE5769 /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E350FAE02C1A81EB00FE5769 /* HealthView.swift */; };
 		E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */; };
 		E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C3B532C098D7A00DEA61D /* ContentView.swift */; };
 		E37C3B562C098D7B00DEA61D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C3B552C098D7B00DEA61D /* Assets.xcassets */; };
@@ -50,7 +57,6 @@
 		E3CF43FC2C12C69300258F42 /* RecentMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF43FB2C12C69300258F42 /* RecentMessage.swift */; };
 		E3CF43FE2C12C71E00258F42 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E3CF43FD2C12C71E00258F42 /* FirebaseFirestoreSwift */; };
 		E3CF44042C17D72B00258F42 /* ChatLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */; };
-		E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44052C180F2B00258F42 /* SettingView.swift */; };
 		E3CF44082C18129100258F42 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CF44072C18129100258F42 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +80,13 @@
 		E30C28C32C0DF311004C9B4D /* MentorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorRow.swift; sourceTree = "<group>"; };
 		E30C28C52C0DFB57004C9B4D /* MentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorList.swift; sourceTree = "<group>"; };
 		E310D0002C19AA540035977E /* MentorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDetailView.swift; sourceTree = "<group>"; };
+		E350FAD32C1A760300FE5769 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		E350FAD52C1A77F900FE5769 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		E350FAD82C1A816C00FE5769 /* FinanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceView.swift; sourceTree = "<group>"; };
+		E350FADA2C1A818100FE5769 /* HousingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousingView.swift; sourceTree = "<group>"; };
+		E350FADC2C1A818C00FE5769 /* EducationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationView.swift; sourceTree = "<group>"; };
+		E350FADE2C1A81CD00FE5769 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		E350FAE02C1A81EB00FE5769 /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
 		E37C3B4E2C098D7A00DEA61D /* Seasoned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seasoned.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonedApp.swift; sourceTree = "<group>"; };
 		E37C3B532C098D7A00DEA61D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,7 +106,6 @@
 		E3CF43F92C11772600258F42 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		E3CF43FB2C12C69300258F42 /* RecentMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentMessage.swift; sourceTree = "<group>"; };
 		E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewModel.swift; sourceTree = "<group>"; };
-		E3CF44052C180F2B00258F42 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		E3CF44072C18129100258F42 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +133,7 @@
 				A03B1B492C192F2E00D06C72 /* StudentRequestRow.swift */,
 				A03B1B4A2C192F2E00D06C72 /* StudentRow.swift */,
 				A03B1B4B2C192F2E00D06C72 /* TransportAppRow.swift */,
+				E30C28C32C0DF311004C9B4D /* MentorRow.swift */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -141,7 +154,6 @@
 				A03B1B552C192F4D00D06C72 /* MeetUpRequestListView.swift */,
 				A03B1B562C192F4D00D06C72 /* MentorHomeScreen.swift */,
 				A03B1B572C192F4D00D06C72 /* MentorMeetUp.swift */,
-				A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */,
 				A03B1B592C192F4D00D06C72 /* StudentDetail.swift */,
 				A03B1B5A2C192F4D00D06C72 /* UpcomingMeetUpsListView.swift */,
 			);
@@ -168,6 +180,7 @@
 		E30C28BE2C0DF22E004C9B4D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E350FAD52C1A77F900FE5769 /* ThemeColor.swift */,
 				E3CF43E42C101D9900258F42 /* User.swift */,
 				E3CF43FB2C12C69300258F42 /* RecentMessage.swift */,
 				E3CF43F92C11772600258F42 /* FirebaseConstants.swift */,
@@ -177,6 +190,19 @@
 				E3CF44032C17D72B00258F42 /* ChatLogViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E350FAD72C1A815700FE5769 /* GuidesView */ = {
+			isa = PBXGroup;
+			children = (
+				E350FAD82C1A816C00FE5769 /* FinanceView.swift */,
+				E350FADA2C1A818100FE5769 /* HousingView.swift */,
+				E350FADC2C1A818C00FE5769 /* EducationView.swift */,
+				A03B1B582C192F4D00D06C72 /* PublicTransportInfoView.swift */,
+				E350FADE2C1A81CD00FE5769 /* EventView.swift */,
+				E350FAE02C1A81EB00FE5769 /* HealthView.swift */,
+			);
+			path = GuidesView;
 			sourceTree = "<group>";
 		};
 		E37C3B452C098D7A00DEA61D = {
@@ -220,6 +246,7 @@
 		E3CF43CE2C0FE35D00258F42 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E350FAD72C1A815700FE5769 /* GuidesView */,
 				A03B1B532C192F4D00D06C72 /* Transport Views */,
 				A03B1B672C192F6900D06C72 /* Extras */,
 				A03B1B5B2C192F4D00D06C72 /* Screens */,
@@ -228,11 +255,10 @@
 				E37C3B512C098D7A00DEA61D /* SeasonedApp.swift */,
 				E37C3B532C098D7A00DEA61D /* ContentView.swift */,
 				E3CF44072C18129100258F42 /* HomeView.swift */,
-				E3CF44052C180F2B00258F42 /* SettingView.swift */,
+				E350FAD32C1A760300FE5769 /* GuideView.swift */,
 				E3CF43CF2C0FE37200258F42 /* LoginView.swift */,
 				E30C28C52C0DFB57004C9B4D /* MentorList.swift */,
 				E310D0002C19AA540035977E /* MentorDetailView.swift */,
-				E30C28C32C0DF311004C9B4D /* MentorRow.swift */,
 				E3CF43F02C10817E00258F42 /* MainView.swift */,
 				E30C28B92C0DF072004C9B4D /* SupportAreaView.swift */,
 				E3CF43EA2C10599F00258F42 /* UserDetailsView.swift */,
@@ -347,18 +373,20 @@
 				E3CF43EF2C10732100258F42 /* MainMessageView.swift in Sources */,
 				A03B1B5E2C192F4D00D06C72 /* HousingInfoView.swift in Sources */,
 				E3CF43FC2C12C69300258F42 /* RecentMessage.swift in Sources */,
+				E350FAE12C1A81EB00FE5769 /* HealthView.swift in Sources */,
 				E30C28BA2C0DF072004C9B4D /* SupportAreaView.swift in Sources */,
 				E3CF44042C17D72B00258F42 /* ChatLogViewModel.swift in Sources */,
 				A03B1B632C192F4D00D06C72 /* StudentDetail.swift in Sources */,
 				A03B1B4F2C192F2E00D06C72 /* StudentRow.swift in Sources */,
+				E350FADB2C1A818100FE5769 /* HousingView.swift in Sources */,
 				E3CF43D02C0FE37200258F42 /* LoginView.swift in Sources */,
+				E350FADD2C1A818C00FE5769 /* EducationView.swift in Sources */,
 				A03B1B622C192F4D00D06C72 /* PublicTransportInfoView.swift in Sources */,
 				E37C3B542C098D7A00DEA61D /* ContentView.swift in Sources */,
 				A03B1B682C192F6900D06C72 /* CategoryButton.swift in Sources */,
 				E30C28C62C0DFB57004C9B4D /* MentorList.swift in Sources */,
 				E3CF43F12C10817E00258F42 /* MainView.swift in Sources */,
 				A03B1B4E2C192F2E00D06C72 /* StudentRequestRow.swift in Sources */,
-				E3CF44062C180F2B00258F42 /* SettingView.swift in Sources */,
 				A03B1B4D2C192F2E00D06C72 /* PublicTransportRow.swift in Sources */,
 				A03B1B5D2C192F4D00D06C72 /* TransportAppsView.swift in Sources */,
 				A03B1B502C192F2E00D06C72 /* TransportAppRow.swift in Sources */,
@@ -367,15 +395,19 @@
 				E3CF43F72C11557700258F42 /* ChatLogView.swift in Sources */,
 				E3CF44082C18129100258F42 /* HomeView.swift in Sources */,
 				A03B1B5C2C192F4D00D06C72 /* OpalCardView.swift in Sources */,
+				E350FAD92C1A816C00FE5769 /* FinanceView.swift in Sources */,
 				E3CF43E52C101D9900258F42 /* User.swift in Sources */,
+				E350FAD42C1A760300FE5769 /* GuideView.swift in Sources */,
 				A03B1B612C192F4D00D06C72 /* MentorMeetUp.swift in Sources */,
 				E3CF43DB2C0FEC2D00258F42 /* ImagePicker.swift in Sources */,
+				E350FAD62C1A77F900FE5769 /* ThemeColor.swift in Sources */,
 				E3CF43FA2C11772600258F42 /* FirebaseConstants.swift in Sources */,
 				E37C3B522C098D7A00DEA61D /* SeasonedApp.swift in Sources */,
 				E3CF43ED2C10637000258F42 /* UserViewModel.swift in Sources */,
 				E310D0012C19AA540035977E /* MentorDetailView.swift in Sources */,
 				A03B1B642C192F4D00D06C72 /* UpcomingMeetUpsListView.swift in Sources */,
 				E30C28C42C0DF311004C9B4D /* MentorRow.swift in Sources */,
+				E350FADF2C1A81CD00FE5769 /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

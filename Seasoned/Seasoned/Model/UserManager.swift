@@ -18,37 +18,38 @@ class UserManager {
     
     //Fetch current user
     func fetchCurrentUser(completion: @escaping (Result<User, Error>) -> Void) {
-        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else {
-            self.errorMessage = "Could not find firebase uid"
-            completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Could not find firebase uid"])))
-            return
-        }
-        
-        FirebaseManager.shared.firestore.collection("users").document(uid).getDocument { snapshot, error in
-            if let error = error {
-                self.errorMessage = "Failed to fetch current user: \(error)"
-                print("Failed to fetch current user:", error)
-                completion(.failure(error))
+            guard let uid = FirebaseManager.shared.auth.currentUser?.uid else {
+                self.errorMessage = "Could not find firebase uid"
+                completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "Could not find firebase uid"])))
                 return
             }
             
-            guard let snapshot = snapshot, snapshot.exists else {
-                self.errorMessage = "No data found"
-                completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data found"])))
-                return
-            }
-            
-            do {
-                let user = try snapshot.data(as: User.self)
-                self.currentUser = user
-                completion(.success(user))
-            } catch let error {
-                self.errorMessage = "Failed to decode user aa: \(error)"
-                print("Failed to decode user aa:", error)
-                completion(.failure(error))
+            FirebaseManager.shared.firestore.collection("users").document(uid).getDocument { snapshot, error in
+                if let error = error {
+                    self.errorMessage = "Failed to fetch current user: \(error)"
+                    print("Failed to fetch current user:", error)
+                    completion(.failure(error))
+                    return
+                }
+                
+                guard let snapshot = snapshot, snapshot.exists else {
+                    self.errorMessage = "No data found"
+                    completion(.failure(NSError(domain: "", code: -1, userInfo: [NSLocalizedDescriptionKey: "No data found"])))
+                    return
+                }
+                
+                do {
+                    let user = try snapshot.data(as: User.self)
+                    self.currentUser = user
+                    FirebaseManager.shared.currentUser = user // Set the shared current user here
+                    completion(.success(user))
+                } catch let error {
+                    self.errorMessage = "Failed to decode user: \(error)"
+                    print("Failed to decode user:", error)
+                    completion(.failure(error))
+                }
             }
         }
-    }
     
     func handleSignOut(completion: @escaping (Result<Void, Error>) -> Void) {
         do {

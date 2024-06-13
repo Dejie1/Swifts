@@ -110,6 +110,7 @@ class UserViewModel: ObservableObject {
     }
 
 
+
     //Calls User Manager to fetch mentors
     func fetchMentors(forCategories categories: [String]) {
         UserManager.shared.fetchMentors(forCategories: categories) { [weak self] mentors in

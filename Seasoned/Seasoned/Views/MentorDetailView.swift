@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MentorDetailView: View {
     var mentor: User
-    
+    @State private var showAlert = false
     // Mapping categories to colors and symbols
     let categoryStyles: [String: (color: Color, symbol: String)] = [
         "Finance": (color: Color.green, symbol: "dollarsign.circle"),
@@ -69,7 +69,7 @@ struct MentorDetailView: View {
                     Spacer()
                     // Request to Connect Button
                     Button(action: {
-                        // Action for the button
+                        showAlert = true
                     }) {
                         Text("Connect")
                             .font(.subheadline)
@@ -78,9 +78,15 @@ struct MentorDetailView: View {
                             .padding(.horizontal, 16)
                             .background(Capsule().fill(Color.blue.opacity(0.2)))
                     }
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Connected"),
+                            message: Text("Start Messaging!"),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
                 }
                 .padding(.bottom,10)
-                
                 Divider()
 
                 Text("")

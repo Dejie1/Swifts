@@ -23,7 +23,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
-//                    .environmentObject(vm)
+                    .environmentObject(vm)
                 
             }
             
@@ -34,13 +34,13 @@ struct ContentView: View {
 //                .environmentObject(UserViewModel())
             
             
-            SettingView()
+            GuideView()
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("Guides", systemImage: "book.closed")
                 }
         }
         .tabViewStyle(DefaultTabViewStyle())
-        .tint(.black)
+        .tint(.blue)
     }
 }
 

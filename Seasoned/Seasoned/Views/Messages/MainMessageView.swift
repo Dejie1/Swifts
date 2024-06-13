@@ -21,76 +21,78 @@ struct MainMessageView: View {
     
     private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
     var body: some View {
-        NavigationStack {
-            VStack {
-                customNavBar
-                messagesView
-            }
-            .overlay(
-                newMessageButton, alignment: .bottom)
-            .navigationBarHidden(true)
-            .navigationDestination(isPresented: $shouldNavigateToChatLogView){
-                ChatLogView(vm: chatLogViewModel)
-                    .environmentObject(UserViewModel())
+            NavigationStack {
+                GeometryReader { geometry in
+                    VStack {
+                        customNavBar
+                        messagesView
+                    }
+                    .overlay(
+                        newMessageButton
+                            .padding()
+                            .position(x: geometry.size.width - 65, y: geometry.size.height - 40),
+                        alignment: .bottomTrailing
+                    )
+                    .navigationBarHidden(true)
+                    .navigationDestination(isPresented: $shouldNavigateToChatLogView) {
+                        ChatLogView(vm: chatLogViewModel)
+                            .environmentObject(UserViewModel())
+                    }
+                }
             }
         }
-    }
     
     
     private var customNavBar: some View {
-        HStack(spacing: 16) {
-            
-            WebImage(url:  URL(string: userViewModel.user? .profileImageUrl ?? ""))
-                .resizable()
-                .frame(width:55, height:55 )
-                .clipShape(Circle())
-            
-            VStack(alignment: .leading, spacing: 4) {
-                
-                
-                Text("\(userViewModel.displayName)")
-                    .font(.system(size: 24, weight: .bold))
-                
-                HStack {
-                    Circle()
-                        .foregroundColor(.green)
-                        .frame(width: 14, height: 14)
-                    Text("online")
-                        .font(.system(size: 12))
-                        .foregroundColor(Color(.lightGray))
+        VStack{
+            HStack(spacing: 16) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Inbox")
+                        .font(.system(size: 35, weight: .bold))
                 }
                 
+                Spacer()
+                Button {
+                    shouldShowLogOutOptions.toggle()
+                } label: {
+                    Image(systemName: "gear")
+                        .font(.system(size: 30, weight: .bold))
+                        .foregroundColor(Color(.label))
+                }
             }
-            
-            Spacer()
-            Button {
-                shouldShowLogOutOptions.toggle()
-            } label: {
-                Image(systemName: "gear")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(Color(.label))
-            }
-        }
-        .padding()
-        .actionSheet(isPresented: $shouldShowLogOutOptions) {
-            .init(title: Text("Settings"), message: Text("What do you want to do?"), buttons: [
-                .destructive(Text("Sign Out"), action: {
-                    print("handle sign out")
-                    userViewModel.handleSignOut()
-                }),
+            .padding()
+            .actionSheet(isPresented: $shouldShowLogOutOptions) {
+                .init(title: Text("Settings"), message: Text("What do you want to do?"), buttons: [
+                    .destructive(Text("Sign Out"), action: {
+                        print("handle sign out")
+                        userViewModel.handleSignOut()
+                    }),
                     .cancel()
-            ])
-        }
-        .fullScreenCover(isPresented: $userViewModel.isUserCurrentlyLoggedOut, onDismiss: nil, content: {
-            LoginView(didCompleteLoginProcess: {
-                self.userViewModel.isUserCurrentlyLoggedOut = false
-                self.userViewModel.fetchCurrentUser()
-                self.userViewModel.fetchRecentMessages()
+                ])
+            }
+            .fullScreenCover(isPresented: $userViewModel.isUserCurrentlyLoggedOut, onDismiss: nil, content: {
+                LoginView(didCompleteLoginProcess: {
+                    self.userViewModel.isUserCurrentlyLoggedOut = false
+                    self.userViewModel.fetchCurrentUser()
+                    self.userViewModel.fetchRecentMessages()
+                })
             })
-        })
+            Divider()
+                .overlay(Color.black)
+//                .padding(.bottom,15)
+        }
+    }
+    
+    
+    private func messageText(recentMessage: RecentMessage) -> String {
+        if let currentUserID = FirebaseManager.shared.auth.currentUser?.uid {
+            return recentMessage.fromId == currentUserID ? "You: \(recentMessage.text)" : recentMessage.text
+        }
+        return recentMessage.text
     }
     
     private var messagesView: some View {
+//        Divider
         ScrollView {
             ForEach(userViewModel.recentMessages) { recentMessage in
                 VStack {
@@ -121,14 +123,18 @@ struct MainMessageView: View {
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width:64, height:64)
+                                .overlay(RoundedRectangle(cornerRadius: 64)
+                                            .stroke(Color.black, lineWidth: 2))
                                 .clipShape(Circle())
                             VStack(alignment: .leading) {
                                 Text(recentMessage.name)
                                     .font(.system(size: 16, weight: .bold))
                                     .foregroundStyle(Color(.label))
-                                Text(recentMessage.text)
+                                    .padding(.bottom,1)
+                                Text(messageText(recentMessage: recentMessage))
                                     .font(.system(size: 14))
                                     .foregroundColor(Color(.darkGray))
+                                
                             }
                             Spacer()
                             
@@ -150,17 +156,18 @@ struct MainMessageView: View {
         } label: {
             HStack {
                 Spacer()
-                Text("+ New Message")
-                    .font(.system(size: 16, weight: .bold))
+                Text("+")
+                    .font(.system(size: 30, weight: .bold))
                 Spacer()
             }
             .foregroundColor(.white)
             .padding(.vertical)
                 .background(Color.blue)
-                .cornerRadius(32)
+                .cornerRadius(19)
                 .padding(.horizontal)
-                .shadow(radius: 15)
+                .shadow(radius: 5)
         }
+        .frame(width:100)
         .fullScreenCover(isPresented: $shouldShowNewMessageScreen) {
             CreateNewMessageView(didSelectNewUser: {user
                 in

@@ -96,5 +96,5 @@ struct MentorList: View {
 }
 
 #Preview {
-    MentorList(selectedCategories: ["Finance"])
+    MentorList(selectedCategories: ["Transport"])
 }

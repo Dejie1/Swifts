@@ -11,13 +11,34 @@ struct MentorMeetUp: View {
     @State private var description: String = ""
     @State private var meetUpDate = Date()
     @State private var selectedCategories: Set<String> = []
+    @State private var showAlert = false
+    @Binding var isPresented: Bool
+    
+    private func resetPage() {
+            selectedCategories.removeAll()
+            description = ""  // Reset any other state variables as needed
+            // Add any additional reset logic here
+        }
     
     var body: some View {
         VStack {
-            Text("Schedule a Meet Up")
-                .font(.title2)
-                .fontWeight(.semibold)
-                .padding()
+            HStack {
+                Button(action: {
+                    isPresented = false
+                }) {
+                    Image(systemName: "chevron.backward")
+                        .font(.system(size: 15))
+                        .padding(.bottom, 5)
+                }
+                .offset(x: 30,y:3)
+                Spacer()
+                Text("Schedule a Meet Up")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding()
+                Spacer()
+            }
+//            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
                 Text("Description")
                     .font(.title3)
@@ -85,8 +106,9 @@ struct MentorMeetUp: View {
                     .padding(.top)
                     .padding(.bottom)
                 
-                    Button(action:{} ){
-                       
+                    Button(action:{
+                        showAlert = true
+                    }) {
                             Text("Send MeetUp Request")
                                 .font(.headline)
                                 .foregroundColor(.white)
@@ -96,7 +118,15 @@ struct MentorMeetUp: View {
                                 .cornerRadius(30)
                                 .padding(.horizontal)
                         }
-                    
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Sent"),
+                            message: Text("MeetUp request has been sent."),
+                            dismissButton: .default(Text("OK"), action: {
+                                isPresented = false
+                            })
+                        )
+                    }
                     .disabled(selectedCategories.isEmpty)
                     .padding()
                 }
@@ -108,6 +138,6 @@ struct MentorMeetUp: View {
     }
 }
 
-#Preview {
-    MentorMeetUp()
-}
+//#Preview {
+//    MentorMeetUp(isPresented: <#T##Binding<Bool>#>)
+//}
