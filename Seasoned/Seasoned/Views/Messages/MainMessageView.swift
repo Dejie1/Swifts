@@ -142,6 +142,7 @@ struct MainMessageView: View {
                                         Text(messageText(recentMessage: recentMessage))
                                             .font(.system(size: 14))
                                             .foregroundColor(Color(.darkGray))
+                                            .lineLimit(1)
                                     }
                                     Spacer()
                                     

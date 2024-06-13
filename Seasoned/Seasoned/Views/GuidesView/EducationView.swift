@@ -17,7 +17,7 @@ struct EducationView: View {
             
             Spacer()
         }
-        .navigationTitle("Housing")
+        .navigationTitle("Education")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

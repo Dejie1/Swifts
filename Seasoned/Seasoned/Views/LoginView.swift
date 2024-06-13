@@ -52,10 +52,12 @@ struct LoginView: View {
                                         .frame(width: 128, height: 128)
                                         .cornerRadius(64)
                                 } else {
-                                    Image(systemName: "person.fill")
+                                    Image(systemName: "camera.fill")
                                         .font(.system(size: 64))
                                         .padding()
-                                        .foregroundColor(Color(.label))
+                                        .foregroundColor(Color(.blue))
+                                        .frame(width: 128, height: 128)
+                                        .cornerRadius(64)
                                 }
                             }
                             .overlay(RoundedRectangle(cornerRadius: 64)
