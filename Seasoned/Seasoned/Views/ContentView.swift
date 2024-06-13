@@ -17,7 +17,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Support Area", systemImage: "star")
                     }
-                    .environmentObject(vm)
+//                    .environmentObject(vm)
             } else if vm.user?.userType == "Mentor" {
                 MentorHomeScreen()
                     .tabItem {
@@ -31,16 +31,16 @@ struct ContentView: View {
                 .tabItem {
                     Label("Messages", systemImage: "message")
                 }
-                .environmentObject(UserViewModel())
+//                .environmentObject(UserViewModel())
             
             
-            SettingView()
+            GuideView()
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Label("Guides", systemImage: "book.closed")
                 }
         }
         .tabViewStyle(DefaultTabViewStyle())
-        .tint(.black)
+        .tint(.blue)
     }
 }
 

@@ -18,26 +18,39 @@ struct ChatMessage: Codable, Identifiable {
 struct ChatLogView: View {
     
     @ObservedObject var vm: ChatLogViewModel
-    
+    @State private var shouldPresentMentorMeetUp = false
     var body: some View {
-        ZStack {
-            messagesView
-            Text(vm.errorMessage)
-        }
-//        .navigationBarBackButtonHidden(true)
-        .onDisappear(){
-            vm.firestoreListener?.remove()
-        }
-        
-        .navigationTitle(vm.chatUser?.name ?? "")
+        NavigationStack {
+            ZStack {
+                messagesView
+                Text(vm.errorMessage)
+            }
+            .onDisappear(){
+                vm.firestoreListener?.remove()
+            }
+            .navigationTitle(vm.chatUser?.name ?? "")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        shouldPresentMentorMeetUp = true
+                    }) {
+                        Image(systemName: "person.line.dotted.person.fill")
+                            .foregroundColor(.blue)
+                    }
+                }
+            }
+            .fullScreenCover(isPresented: $shouldPresentMentorMeetUp) {
+                MentorMeetUp(isPresented: $shouldPresentMentorMeetUp)
+            }
+        }
     }
     
     static let emptyScrollToString = "Empty"
     
     private var messagesView: some View {
         VStack {
-            if #available(iOS 15.0, *) {
+            if #available(iOS 15.0, *){
                 ScrollView {
                     ScrollViewReader { scrollViewProxy in
                         VStack {
@@ -60,22 +73,23 @@ struct ChatLogView: View {
                     chatBottomBar
                         .background(Color(.systemBackground).ignoresSafeArea())
                 }
-            } else {
-                // Fallback on earlier versions
             }
-
         }
     }
     
     private var chatBottomBar: some View {
         HStack(spacing: 16) {
-            Image(systemName: "photo.on.rectangle")
-                .font(.system(size: 24))
-                .foregroundColor(Color(.darkGray))
             ZStack {
-                DescriptionPlaceholder()
+                RoundedRectangle(cornerRadius: 20)
+                    .strokeBorder(Color.gray, lineWidth: 1) // Rounded border with a gray color and 1-point line width
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color.white)) // Fill the background with white color
+                if vm.chatText.isEmpty {
+                    DescriptionPlaceholder()
+                }
                 TextEditor(text: $vm.chatText)
+                    .padding(8) // Add padding to create space between the text and the border
                     .opacity(vm.chatText.isEmpty ? 0.5 : 1)
+                
             }
             .frame(height: 40)
             
@@ -136,11 +150,11 @@ struct MessageView: View {
 private struct DescriptionPlaceholder: View {
     var body: some View {
         HStack {
-            Text("Description")
+            Text(" Text")
                 .foregroundColor(Color(.gray))
                 .font(.system(size: 17))
-                .padding(.leading, 5)
-                .padding(.top, -4)
+                .padding(.leading, 9)
+                .padding(.top, -2)
             Spacer()
         }
     }

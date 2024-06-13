@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct MentorList: View {
     @ObservedObject var viewModel = UserViewModel()
@@ -29,8 +30,8 @@ struct MentorList: View {
                     Text("Here’s some seasoned students that may help.")
                         .font(.title)
                         .fontWeight(.black)
-                        .padding(.top,30)
-                        .padding(.bottom,15)
+                        .padding(.top, 30)
+                        .padding(.bottom, 15)
                     Text("Find the one that matches your ")
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -54,7 +55,6 @@ struct MentorList: View {
                     }
                 }
                         
-                
                 Divider()
                 
                 if viewModel.errorMessage.isEmpty && filteredMentors.isEmpty {
@@ -71,13 +71,17 @@ struct MentorList: View {
                     ScrollView {
                         VStack(spacing: 30) { // Add spacing here
                             ForEach(filteredMentors, id: \.uid) { mentor in
-                                MentorRow(mentor: mentor)
-                                    .padding(.leading, 15)
-                                    .padding([.top, .bottom], 15)
-                                    .background(Color(UIColor(red: 0.922, green: 0.922, blue: 0.922, alpha: 1.0)))
-                                    .cornerRadius(10)
+                                NavigationLink(destination: MentorDetailView(mentor: mentor)) {
+                                    MentorRow(mentor: mentor)
+                                        .padding(.leading, 15)
+                                        .padding([.top, .bottom], 15)
+                                        .background(Color(UIColor(red: 0.922, green: 0.922, blue: 0.922, alpha: 1.0)))
+                                        .cornerRadius(10)
+                                }
+                                .frame(width: 365)
                             }
-                            .frame(width: 365)
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundStyle(Color(.label))
                         }
                         .padding([.leading, .trailing], 30)
                     }
@@ -92,5 +96,5 @@ struct MentorList: View {
 }
 
 #Preview {
-    MentorList(selectedCategories: ["Finance"])
+    MentorList(selectedCategories: ["Transport"])
 }

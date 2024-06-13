@@ -28,15 +28,23 @@ struct UserDetailsView: View {
             Form {
                 Section(header: Text("Enter your details ")) {
                     TextField("Name", text: $name)
-                    Text("Current UiD: \(viewModel.user?.uid ?? "" )")
                     
-                    TextEditor(text: $about)
-                        .frame(height: 100)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.gray, lineWidth: 1)
-                        )
-                        .padding(.vertical, 5)
+                    ZStack(alignment: .leading) {
+                        if about.isEmpty {
+                            Text("About")
+                                .foregroundColor(Color.gray)
+                                .padding(.horizontal, 8)
+                                .offset(y:-32)
+                        }
+                        TextEditor(text: $about)
+                            .frame(height: 100)
+                            .padding(4)
+                    }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
+                    .padding(.vertical, 5)
                     
                     Picker("Age", selection: $age) {
                         ForEach(ageRange, id: \.self) {
