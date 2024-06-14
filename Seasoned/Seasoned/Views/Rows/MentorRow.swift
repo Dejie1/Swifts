@@ -15,12 +15,14 @@ struct MentorRow: View {
         HStack {
             WebImage(url: URL(string: mentor.profileImageUrl))
                 .resizable()
+                .scaledToFill()
                 .frame(width: 70, height: 70)
                 .clipShape(Circle())
             
             VStack(alignment: .leading) {
                 Text(mentor.name)
                     .font(.headline)
+                    .padding(.bottom,1)
                 Group {
                     Text("\(mentor.age ?? 0), ")
                     + Text(mentor.uni ?? "Unknown University")
@@ -28,6 +30,7 @@ struct MentorRow: View {
                 .font(.subheadline)
                 .foregroundColor(Color(.gray))
                 Text(mentor.course ?? "Unknown Course")
+                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                     .font(.subheadline)
                     .foregroundColor(Color(.gray))
             }
@@ -51,7 +54,7 @@ struct MentorRow_Previews: PreviewProvider {
             about: "A brief description about John Doe.",
             age: 25,
             uni: "XYZ University",
-            course: "Computer Science"
+            course: "Bachelor of Science and Game Design yea yeaI know"
         ))
     }
 }

@@ -35,11 +35,11 @@ struct MentorDetailView: View {
                             case .success(let image):
                                 image
                                     .resizable()
-                                    .scaledToFit()
+                                    .scaledToFill()
                                     .frame(width: 200, height: 200)
                                     .clipShape(Circle())
-                                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                                    .shadow(radius: 7)
+                                    .overlay(Circle().stroke(Color.black, lineWidth: 2))
+                                    .shadow(radius: 3)
                             case .failure:
                                 Image(systemName: "person.fill")
                                     .resizable()
