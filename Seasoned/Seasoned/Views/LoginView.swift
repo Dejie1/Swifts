@@ -10,7 +10,13 @@ struct LoginView: View {
     @State private var userType = "Student"
     private let userTypes = ["Student", "Mentor"]
     @State var shouldShowImagePicker = false
-    @State var loginStatusMessage = ""
+    
+    @State private var showAlert = false
+    @State var loginStatusMessage = "" {
+            didSet {
+                showAlert = !loginStatusMessage.isEmpty
+            }
+        }
     
     @EnvironmentObject private var viewModel: UserViewModel
     @State private var showUserDetailsPage = false
@@ -127,6 +133,9 @@ struct LoginView: View {
             .navigationTitle(isLoginMode ? "Log In" : "Create Account")
             .background(Color(.init(white: 0, alpha: 0.05))
                             .ignoresSafeArea())
+            .alert(isPresented: $showAlert) {
+                            Alert(title: Text("Info"), message: Text(loginStatusMessage), dismissButton: .default(Text("OK")))
+                        }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
@@ -141,12 +150,12 @@ struct LoginView: View {
             isLoading = false
             if let err = err {
                 print("Failed to login user:", err)
-                self.loginStatusMessage = "Failed to login user: \(err)"
+                self.loginStatusMessage = "Wrong email or password."
                 return
             }
             
             print("Successfully logged in as user: \(result?.user.uid ?? "")")
-            self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+//            self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
             
             // Fetch the current user to check if the name is empty.
             // Booleans to Navigate the user to different pages
@@ -180,6 +189,9 @@ struct LoginView: View {
         if self.image == nil {
             self.loginStatusMessage = "Select an Avatar"
             return
+        } else if self.email.isEmpty || self.password.isEmpty {
+            self.loginStatusMessage = "Missing Email Or Password"
+            return
         }
         
         isLoading = true
@@ -188,12 +200,12 @@ struct LoginView: View {
             if let err = err {
                 isLoading = false
                 print("Failed to create user:", err)
-                self.loginStatusMessage = "Failed to create user: \(err)"
+                self.loginStatusMessage = "Email already in use"
                 return
             }
             
             print("Successfully created user: \(result?.user.uid ?? "")")
-            self.loginStatusMessage = "Successfully created user: \(result?.user.uid ?? "")"
+//            self.loginStatusMessage = "Successfully created user."
             self.persistImageToStorage()
         }
     }
@@ -232,7 +244,7 @@ struct LoginView: View {
                 }
                 
                 let downloadURLString = downloadURL.absoluteString
-                self.loginStatusMessage = "Successfully stored image with url: \(downloadURLString)"
+//                self.loginStatusMessage = "Successfully stored image with url: \(downloadURLString)"
                 print(downloadURLString)
                 
                 self.storeUserInformation(imageProfileUrl: downloadURL)
